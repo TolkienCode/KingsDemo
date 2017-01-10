@@ -73,13 +73,13 @@ class MyAccountViewController: UIViewController, UITableViewDataSource, UITableV
         accountInfo = UITableView();
         accountInfo?.delegate = self;
         accountInfo?.dataSource = self;
-        accountInfo!.frame = CGRect(x: screenWidth / 12, y: 0, width: screenWidth/12 * 10, height: screenHeight - screenHeight/3);
+        accountInfo!.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight - screenHeight/3);
         accountInfo?.backgroundColor = UIColor.white;
         
         
-        self.UserInfo = ["用户信息", "用户消息"];
+        self.UserInfo = ["账户详情", "收藏商品"];
         self.OrderInfo = ["订单管理", "物流查询", "退款查询"];
-        self.SettingInfo = ["系统设置", "用户反馈"];
+        self.SettingInfo = ["系统设置", "用户反馈", "系统消息"];
         
         
         accountInfo?.register(MyAccountCell.self, forCellReuseIdentifier: "MyAccountCell")
@@ -138,13 +138,13 @@ class MyAccountViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
         if section == 0 {
-            return "用户信息"
+            return "用户"
         }
         if section == 1 {
-            return "订单信息"
+            return "订单"
         }
         if section == 2 {
-            return "系统设置"
+            return "系统"
         }
         
         return "Default Title"
@@ -176,12 +176,12 @@ class MyAccountViewController: UIViewController, UITableViewDataSource, UITableV
             cell.textLabel?.text = self.SettingInfo[(indexPath as NSIndexPath).row]
         }
 
-        let imageName = "usrIcon"
+        //let imageName = "usrIcon"
         
-        let cellBkImage = UIImage(named: String(imageName))
-        let cellBkImageView = UIImageView(frame: cell.frame)
-        cellBkImageView.image = cellBkImage
-        cellBkImageView.contentMode = .scaleToFill
+        //let cellBkImage = UIImage(named: String(imageName))
+        //let cellBkImageView = UIImageView(frame: cell.frame)
+        //cellBkImageView.image = cellBkImage
+        //cellBkImageView.contentMode = .scaleToFill
         
         // cell.backgroundView = cellBkImageView
         

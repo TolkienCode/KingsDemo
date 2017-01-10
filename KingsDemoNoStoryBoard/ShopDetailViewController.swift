@@ -16,10 +16,16 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
     var shopDetailRecommendationView: UIView?
     var pageControl: UIPageControl?
     
+    
+    var secondView:UIView?;
+    var titleLabel: UILabel?;
+    var descritpionLable: UILabel?;
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        shopDetailView = UIScrollView(frame: CGRect(x:0.0, y:0.0, width: screenWidth, height: screenHeight))
+        shopDetailView = UIScrollView(frame: CGRect(x:0.0, y:0.0, width: screenWidth, height: screenHeight/5*3))
         shopDetailView?.isPagingEnabled = true
         shopDetailView?.delegate = self
         shopDetailView?.showsVerticalScrollIndicator = true
@@ -76,12 +82,31 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         shopDetailView?.addSubview(pageControl!)
         //shopDetailView?.addSubview(shopDetailPriceView!)
         //shopDetailView?.addSubview(shopDetailRecommendationView!)
-        self.view = shopDetailView
+        
         self.navigationController?.isNavigationBarHidden = false;
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
+        
+        secondView = UIView();
+        secondView?.frame = CGRect(x:0.0, y:screenHeight/5*3, width: screenWidth, height: screenHeight/5*2);
+        secondView?.backgroundColor = UIColor.lightGray;
+        
+        titleLabel = UILabel();
+        titleLabel?.frame = CGRect(x:0.0, y:0.0, width: screenWidth, height: screenHeight/5*2/4);
+        //titleLabel?.backgroundColor = UIColor.lightGray;
+        titleLabel?.text = "天上之玉（商品编号: Y10023033）";
+        secondView?.addSubview(titleLabel!);
+        
+        
+        descritpionLable=UILabel();
+        descritpionLable?.frame=CGRect(x:0.0, y:0.0, width: screenWidth, height: screenHeight/5*2/4*3);
+        descritpionLable?.text = "集合天地之灵气";
+        secondView?.addSubview(descritpionLable!);
 
+        
+        self.view.addSubview(shopDetailView!);
+        self.view.addSubview(secondView!);
         print("shop detail view loaded")
     }
 
