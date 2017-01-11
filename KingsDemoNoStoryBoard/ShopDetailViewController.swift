@@ -16,7 +16,8 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
     var shopDetailRecommendationView: UIView?
     var pageControl: UIPageControl?
     
-    
+    let navigationBarHeight: CGFloat = 64.0
+    var navigationBar: UINavigationBar?
     var secondView:UIView?;
     var titleLabel: UILabel?;
     var descritpionLable: UILabel?;
@@ -25,12 +26,45 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        shopDetailView = UIScrollView(frame: CGRect(x:0.0, y:0.0, width: screenWidth, height: screenHeight/5*3))
+
+        setupNavigation();
+        setupPageView();
+        
+        self.view.addSubview(navigationBar!);
+        self.view.addSubview(shopDetailView!);
+        self.view.addSubview(secondView!);
+        print("shop detail view loaded")
+    }
+
+    func goBack() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    private func setupNavigation() {
+        navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: self.navigationBarHeight));
+        navigationBar!.backgroundColor=UIColor.white;
+        
+        let rightButton = UIBarButtonItem(title: "购物车", style: .done, target: nil, action: nil)
+        let leftButton = UIBarButtonItem(title: "返回", style: .done, target: nil, action: #selector(ShopDetailViewController.goBack))
+        /*
+         homeNavigation!.topItem?.title = "首页";
+         homeNavigation!.topItem?.rightBarButtonItem = rightButton;
+         homeNavigation!.topItem?.leftBarButtonItem = leftButton;
+         */
+        
+        let navItem = UINavigationItem(title: "商品详情")
+        navItem.leftBarButtonItem = leftButton
+        navItem.rightBarButtonItem = rightButton
+        navigationBar!.setItems([navItem], animated: false)
+    }
+    
+    private func setupPageView() {
+        shopDetailView = UIScrollView(frame: CGRect(x:0.0, y:0.0 + navigationBarHeight, width: screenWidth, height: screenHeight/5*3))
         shopDetailView?.isPagingEnabled = true
         shopDetailView?.delegate = self
         shopDetailView?.showsVerticalScrollIndicator = true
         shopDetailView?.contentSize = CGSize(width: screenWidth, height: pageHeight)
-
+        
         shopDetailHeaderView = UIScrollView(frame: CGRect(x:0.0, y:0.0, width: screenWidth, height: screenHeight / 2))
         shopDetailHeaderView?.showsVerticalScrollIndicator = false
         
@@ -83,10 +117,12 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         //shopDetailView?.addSubview(shopDetailPriceView!)
         //shopDetailView?.addSubview(shopDetailRecommendationView!)
         
+        /* system navigation bar removed
         self.navigationController?.isNavigationBarHidden = false;
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
+        */
         
         secondView = UIView();
         secondView?.frame = CGRect(x:0.0, y:screenHeight/5*3, width: screenWidth, height: screenHeight/5*2);
@@ -98,18 +134,12 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         titleLabel?.text = "天上之玉（商品编号: Y10023033）";
         secondView?.addSubview(titleLabel!);
         
-        
         descritpionLable=UILabel();
         descritpionLable?.frame=CGRect(x:0.0, y:0.0, width: screenWidth, height: screenHeight/5*2/4*3);
         descritpionLable?.text = "集合天地之灵气";
         secondView?.addSubview(descritpionLable!);
-
-        
-        self.view.addSubview(shopDetailView!);
-        self.view.addSubview(secondView!);
-        print("shop detail view loaded")
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

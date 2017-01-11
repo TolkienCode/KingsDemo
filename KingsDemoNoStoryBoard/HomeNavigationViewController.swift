@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+
+class HomeNavigationViewController:UINavigationController
+{
+    // view controller的navigationController属性是只读的，不知道有什么方法可以设置这个属性
+}

@@ -42,7 +42,7 @@ class TabViewController: UITabBarController, UITabBarControllerDelegate {
         
         // Create Tab four: My Account
         let tabFour = MyAccountViewController()
-        let tabFourBarItem = UITabBarItem(title: "用户", image: UIImage(named: "tabUser"), selectedImage: UIImage(named: "selectedImage4.png"))
+        let tabFourBarItem = UITabBarItem(title: "用户", image: UIImage(named: "user"), selectedImage: UIImage(named: "selectedImage4.png"))
         
         tabFour.tabBarItem = tabFourBarItem
         

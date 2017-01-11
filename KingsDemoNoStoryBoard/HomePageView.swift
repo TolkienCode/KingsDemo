@@ -188,7 +188,6 @@ class HomePageView: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDeleg
         self.isPagingEnabled = true
         self.delegate = HomePageViewController()
         self.showsVerticalScrollIndicator = true
-        self.contentSize = CGSize(width: screenWidth, height: pageHeight)
         
         let headerStartHeight:CGFloat = 0.0
         let sectionHeight:CGFloat = 200.0
@@ -216,7 +215,7 @@ class HomePageView: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDeleg
         headerView?.addSubview(headerImageView3)
         
         headerView?.isPagingEnabled = true
-        headerView?.contentSize = CGSize(width: screenWidth * 3, height: screenHeight)
+        headerView?.contentSize = CGSize(width: screenWidth * 3, height: sectionHeight)
         
         pageControl = UIPageControl()
         let pageContrlX = (CGFloat) (screenWidth - 80)
@@ -243,19 +242,19 @@ class HomePageView: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDeleg
         self.addSubview(headerView!)
         self.addSubview(pageControl!)
         
-        // 店长推荐 - rec
+        // 新品推荐 - rec
         let recommendationStartHeight = sectionHeight + headerStartHeight
         let iconImageWidth: CGFloat = (screenWidth - imageMargin * 4) / 3
         let recommendationSectionHeight:CGFloat = recLabelHeight + sectionMargin + imageMargin + sectionMargin + iconImageWidth + iconImageWidth
         
-        let secView = SectionView(frame: CGRect(x:0.0, y:recommendationStartHeight, width: screenWidth, height:recommendationSectionHeight), title: "---  店长推荐  ---", firstLineImage: self.recFirstLineImage!, secondLineImage: self.recSecondLineImage!, recFirstLineItemNumber: self.recFirstLineItemNumber!, recSecondLineItemNumber: self.recSecondLineItemNumber! )
+        let secView = SectionView(frame: CGRect(x:0.0, y:recommendationStartHeight, width: screenWidth, height:recommendationSectionHeight), title: "---  新品推荐  ---", firstLineImage: self.recFirstLineImage!, secondLineImage: self.recSecondLineImage!, recFirstLineItemNumber: self.recFirstLineItemNumber!, recSecondLineItemNumber: self.recSecondLineItemNumber! )
         //let recView = UIView(frame: CGRect(x:0.0, y:recommendationStartHeight, width: screenWidth, height:recommendationSectionHeight))
         secView.backgroundColor = UIColor.white
         self.addSubview(secView)
         
-        // 猜你喜欢
-        let secView2 = SectionView(frame: CGRect(x:0.0, y:recommendationStartHeight + recommendationSectionHeight, width: screenWidth, height:recommendationSectionHeight), title: "---  猜你喜欢  ---", firstLineImage: self.recFirstLineImage!, secondLineImage: self.recSecondLineImage!, recFirstLineItemNumber: self.recFirstLineItemNumber!, recSecondLineItemNumber: self.recSecondLineItemNumber!)
-        secView2.backgroundColor = UIColor.red
+        // 限时秒杀
+        let secView2 = SectionView(frame: CGRect(x:0.0, y:recommendationStartHeight + recommendationSectionHeight, width: screenWidth, height:recommendationSectionHeight), title: "---  限时秒杀  ---", firstLineImage: self.recFirstLineImage!, secondLineImage: self.recSecondLineImage!, recFirstLineItemNumber: self.recFirstLineItemNumber!, recSecondLineItemNumber: self.recSecondLineItemNumber!)
+        secView2.backgroundColor = UIColor.white
         self.addSubview(secView2)
     }
 

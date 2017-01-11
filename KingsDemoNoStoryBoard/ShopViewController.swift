@@ -176,7 +176,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         print("User selected table row \(indexPath.row) and item \(itemsToLoad[indexPath.row])");
-        navigationController?.pushViewController(ShopDetailViewController(), animated: false);
+        present(ShopDetailViewController(), animated: true, completion: nil);
     }
     
 

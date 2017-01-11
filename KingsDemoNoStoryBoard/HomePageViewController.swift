@@ -8,60 +8,12 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController, UIScrollViewDelegate {
-    var homePageView: HomePageView?
-    var searchPageView: UIView?
-    var backgroundView: UIView?
+let navigationBarHeight:CGFloat = 64.0
 
-    private func setupHomePageView() {
-        // Do any additional setup after loading the view.
-        //let y = (self.navigationController?.navigationBar.frame.height)! * -1
-        let recImage1 = UIImage(named: "1")
-        
-        homePageView = HomePageView(frame: CGRect(x:0.0, y:0.0, width:screenWidth, height:screenHeight), recFirstLineImage: [recImage1!, recImage1!, recImage1!], recSecondLineImage: [recImage1!, recImage1!, recImage1!], recFirstLineItemNumber: [1,2,3], recSecondLineItemNumber: [4,5,6])
-        homePageView?.backgroundColor = UIColor.lightGray
-        
-        /*
-        let searchBtn = UIButton(frame: CGRect(x:0, y:0.0, width: screenWidth, height: 20))
-        searchBtn.setTitle("search", for: .normal)
-        searchBtn.addTarget(self, action: #selector(showSearchPage), for: .touchUpInside)
-        homePageView?.addSubview(searchBtn)
-         */
-        
-        // Test
-        print("drawing home page")
-        print(homePageView!.frame)
-    }
-    
-    func showHomePage()
-    {
-        let view = UIView(frame: CGRect(x:0.0, y:0.0, width:screenWidth, height:screenHeight))
-        //view.addSubview(backgroundView!)
-        view.addSubview(homePageView!)
-        self.view = view
-    }
-    
-    private func setupSearchPageView()
-    {
-        let cancelBtn = UIButton(frame: CGRect(x:0, y:10, width: 100, height: 100))
-        cancelBtn.setTitle("Cancel", for: UIControlState.normal)
-        cancelBtn.addTarget(self, action: #selector(showHomePage), for: .touchUpInside)
-        
-        searchPageView = UIView(frame: UIScreen.main.bounds)
-        searchPageView?.addSubview(cancelBtn)
-    }
-    
-    func showDetailPage(sender: UIButton!)
-    {
-        print(sender.tag)
-        self.navigationController?.pushViewController(ShopDetailViewController(), animated: false)
-    }
-    
-    func setupBackGroundView()
-    {
-        backgroundView = UIScrollView(frame: CGRect(x:0.0, y:0.0, width:screenWidth, height:pageHeight))
-        backgroundView?.backgroundColor = UIColor.lightGray
-    }
+class HomePageViewController: UIViewController, UIScrollViewDelegate
+{
+    var homePageView: HomePageView?
+    var homeNavigation: UINavigationBar?
     
     override func viewDidLoad()
     {
@@ -72,18 +24,54 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate {
         screenWidth = screenSize.width
         screenHeight = screenSize.height
         
-        setupHomePageView()
-        setupSearchPageView()
-        setupBackGroundView()
-        //self.view.addSubview(homePageView)
-        //self.view.addSubview(searchPageView)
+        setupNavigation();
+        setupHomePageView();
         
-        showHomePage();
+        self.view.addSubview(homeNavigation!)
+        self.view.addSubview(homePageView!);
         
-        customizeNavigationBar()
         print("home view did load")
     }
 
+    private func setupNavigation()
+    {
+        homeNavigation = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: navigationBarHeight));
+        homeNavigation!.backgroundColor=UIColor.white;
+        
+        let rightButton = UIBarButtonItem(title: "购物车", style: .done, target: nil, action: nil)
+        let leftButton = UIBarButtonItem(title: "搜索", style: .done, target: nil, action: nil)
+        /*
+        homeNavigation!.topItem?.title = "首页";
+        homeNavigation!.topItem?.rightBarButtonItem = rightButton;
+        homeNavigation!.topItem?.leftBarButtonItem = leftButton;
+        */
+        
+        let navItem = UINavigationItem(title: "首页")
+        navItem.leftBarButtonItem = leftButton
+        navItem.rightBarButtonItem = rightButton
+        homeNavigation!.setItems([navItem], animated: false)
+    }
+    
+    private func setupHomePageView()
+    {
+        // Do any additional setup after loading the view.
+        // let y = (self.navigationController?.navigationBar.frame.height)! * -1
+        let recImage1 = UIImage(named: "1")
+        
+        homePageView = HomePageView(frame: CGRect(x:0.0, y:navigationBarHeight, width:screenWidth, height:screenHeight), recFirstLineImage: [recImage1!, recImage1!, recImage1!], recSecondLineImage: [recImage1!, recImage1!, recImage1!], recFirstLineItemNumber: [1,2,3], recSecondLineItemNumber: [4,5,6])
+        
+        homePageView?.contentSize = CGSize(width: screenWidth, height: pageHeight)
+        
+        homePageView?.backgroundColor = UIColor.white
+    }
+    
+    func showDetailPage(sender: UIButton!)
+    {
+        print(sender.tag)
+        //elf.navigationController?.pushViewController(ShopDetailViewController(), animated: false)
+        present(ShopDetailViewController(), animated: true, completion: nil);
+    }
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
@@ -91,41 +79,17 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
+/*
 // navi bar
 extension HomePageViewController {
+    
     fileprivate func customizeNavigationBar() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
     }
     
-    /*
-    fileprivate func createBackButton() -> UIButton {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 22, height: 44))
-        button.addTarget(self, action: #selector(showSearchPage) , for: .touchUpInside)
-        button.setTitle("<", for: .normal)
-        return button
-    }
-    
-    fileprivate func createNavigationBarBackItem(button: UIButton?) -> UIBarButtonItem? {
-        guard let button = button else {
-            return nil
-        }
-        
-        let buttonItem = UIBarButtonItem(customView: button)
-        navigationItem.leftBarButtonItem = buttonItem
-        return buttonItem
-    }*/
 }
+*/

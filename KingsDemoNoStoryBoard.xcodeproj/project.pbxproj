@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452E56051E260CE300B632AB /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 452E56041E260CE300B632AB /* user.png */; };
+		452E56071E260D0000B632AB /* defaultphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 452E56061E260D0000B632AB /* defaultphoto.png */; };
+		452E56091E260E9200B632AB /* HomeNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452E56081E260E9200B632AB /* HomeNavigationViewController.swift */; };
 		45A9DF741E23CDF80043A95F /* usrIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 45A9DF731E23CDF80043A95F /* usrIcon.png */; };
 		45F091F11E24BE22006A8414 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F091F01E24BE22006A8414 /* CarViewController.swift */; };
 		45F091F71E24E89F006A8414 /* Car1.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F091F41E24E89F006A8414 /* Car1.png */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		452E56041E260CE300B632AB /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		452E56061E260D0000B632AB /* defaultphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultphoto.png; sourceTree = "<group>"; };
+		452E56081E260E9200B632AB /* HomeNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationViewController.swift; sourceTree = "<group>"; };
 		45A9DF731E23CDF80043A95F /* usrIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usrIcon.png; sourceTree = "<group>"; };
 		45F091F01E24BE22006A8414 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		45F091F41E24E89F006A8414 /* Car1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Car1.png; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 		45A9DF721E23CD3B0043A95F /* img */ = {
 			isa = PBXGroup;
 			children = (
+				452E56061E260D0000B632AB /* defaultphoto.png */,
+				452E56041E260CE300B632AB /* user.png */,
 				45F091F41E24E89F006A8414 /* Car1.png */,
 				45F091F51E24E89F006A8414 /* Car2.png */,
 				45F091F61E24E89F006A8414 /* Car3.png */,
@@ -181,6 +189,7 @@
 				73B9690B1E1611B7000B829C /* TabViewController.swift */,
 				45F091F01E24BE22006A8414 /* CarViewController.swift */,
 				73B9690D1E1615E6000B829C /* HomePageViewController.swift */,
+				452E56081E260E9200B632AB /* HomeNavigationViewController.swift */,
 				73B9690F1E161601000B829C /* MyAccountViewController.swift */,
 				73B969111E1617E2000B829C /* RandomPageViewController.swift */,
 			);
@@ -255,7 +264,7 @@
 				TargetAttributes = {
 					73B968D21E160E5C000B829C = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = V55DNEEJD8;
+						DevelopmentTeam = N7889B7KPX;
 						ProvisioningStyle = Automatic;
 					};
 					73B968E61E160E5C000B829C = {
@@ -299,6 +308,8 @@
 			files = (
 				45F091F91E24E89F006A8414 /* Car3.png in Resources */,
 				73B968DE1E160E5C000B829C /* Assets.xcassets in Resources */,
+				452E56051E260CE300B632AB /* user.png in Resources */,
+				452E56071E260D0000B632AB /* defaultphoto.png in Resources */,
 				45F091F81E24E89F006A8414 /* Car2.png in Resources */,
 				45F091F71E24E89F006A8414 /* Car1.png in Resources */,
 				45A9DF741E23CDF80043A95F /* usrIcon.png in Resources */,
@@ -332,6 +343,7 @@
 				73B969101E161601000B829C /* MyAccountViewController.swift in Sources */,
 				45F091F11E24BE22006A8414 /* CarViewController.swift in Sources */,
 				73B969141E1618B4000B829C /* ShopDetailViewController.swift in Sources */,
+				452E56091E260E9200B632AB /* HomeNavigationViewController.swift in Sources */,
 				732C26A71E1656D100B7D2C9 /* SearchPageView.swift in Sources */,
 				73B9690A1E160FE6000B829C /* ShopViewController.swift in Sources */,
 				732C26A91E16574C00B7D2C9 /* HomePageView.swift in Sources */,
@@ -466,7 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = V55DNEEJD8;
+				DEVELOPMENT_TEAM = N7889B7KPX;
 				INFOPLIST_FILE = KingsDemoNoStoryBoard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonchan.KingsDemoNoStoryBoard;
@@ -479,7 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = V55DNEEJD8;
+				DEVELOPMENT_TEAM = N7889B7KPX;
 				INFOPLIST_FILE = KingsDemoNoStoryBoard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonchan.KingsDemoNoStoryBoard;
