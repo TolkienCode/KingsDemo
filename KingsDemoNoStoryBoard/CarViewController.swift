@@ -88,7 +88,7 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cellBkImageView.contentMode = .scaleToFill
         
         cell.backgroundView = cellBkImageView
-        
+        cell.selectionStyle = .none
         return cell
     }
     

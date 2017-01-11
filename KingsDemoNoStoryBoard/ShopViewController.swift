@@ -10,6 +10,8 @@ import UIKit
 
 var seasonTitle:String? = "春";
 var currentSeason:String?;
+var shopNavigation:UINavigationBar?;
+
 
 class SpringCell: UITableViewCell
 {
@@ -47,15 +49,26 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var myTableView4: UITableView = UITableView()
     
     var itemsToLoad: [String] = ["One", "Two", "Three", "Four", "Five"]
+    var pageTitles: [String] = ["春之绿", "夏之=。=", "秋之=。=", "冬之=。="]
+    
+    var rightButton: UIBarButtonItem?
+    var navItem: UINavigationItem?
     
     // 不知道什么时候掉用，大概是停止滑动的时候
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)
     {
         let offsetX = scrollView.contentOffset.x
         let currentIndex = (Int)(offsetX / screenWidth)
-        print("currentindex \(currentIndex)")
+        // print("currentindex \(currentIndex)")
+        navItem?.title = pageTitles[currentIndex]
         // pageControl!.currentPage = currentIndex
     }
+    
+    /*
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // print("scroll view did scroll")
+    }
+    */
     
     override func viewDidLoad()
     {
@@ -67,11 +80,21 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let screenWidth = screenSize.width
         let screenHeight = screenSize.height
         
-        self.navigationController?.isNavigationBarHidden = false;
-        self.navigationController?.navigationBar.barTintColor = UIColor.red;
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Heiti SC", size: 24.0)!];
+        //self.navigationController?.isNavigationBarHidden = false;
+        //self.navigationController?.navigationBar.barTintColor = UIColor.red;
+        //self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Heiti SC", size: 24.0)!];
         //self.navigationItem.prompt = "秋";
-        self.navigationItem.title = "春";
+        //self.navigationItem.title = "春";
+        
+        shopNavigation = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: navigationBarHeight));
+        shopNavigation!.backgroundColor=UIColor.white;
+        
+        rightButton = UIBarButtonItem(title: "购物车", style: .done, target: nil, action: nil);
+        navItem = UINavigationItem(title: "春之绿");
+        navItem!.rightBarButtonItem = rightButton;
+        
+        shopNavigation!.setItems([navItem!], animated: false)
+        
         
         //myTableView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         myTableView.frame = CGRect(x: CGFloat(0.0), y: CGFloat(0.0), width: screenWidth, height: screenHeight);
@@ -108,8 +131,11 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         myTableView4.register(SpringCell.self, forCellReuseIdentifier: "SpringCell")
         
         
+        // -- setup shopview --
+        shopView = UIScrollView(frame: CGRect(x: 0, y: navigationBarHeight, width: screenWidth, height: screenHeight))
         
-        shopView = UIScrollView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
+        // set scroll view delegate
+        shopView?.delegate = self
         
         shopView?.contentSize = CGSize(width: screenWidth * 4, height: screenHeight)
         shopView?.isPagingEnabled = true
@@ -119,18 +145,21 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         shopView?.addSubview(myTableView3);
         shopView?.addSubview(myTableView4);
         
+        self.view.addSubview(shopNavigation!);
         self.view.addSubview(shopView!);
         
         //self.view.addSubview(myTableView);
         //self.view.
     }
     
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool)
+    {
         super.viewWillAppear(animated)
     }
     
@@ -148,18 +177,21 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         if tableView == myTableView {
             cell = tableView.dequeueReusableCell(withIdentifier: "SpringCell", for: indexPath as IndexPath);
+            
         } else if tableView == myTableView2 {
             cell = tableView.dequeueReusableCell(withIdentifier: "SummerCell", for: indexPath as IndexPath);
+            
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "SpringCell", for: indexPath as IndexPath);
         }
         
+        cell?.selectionStyle = .none
         
-        // cell.imageView?.image = UIImage(named: "1")
+        //cell.imageView?.image = UIImage(named: "1")
         
         //cell.textLabel?.text = self.itemsToLoad[indexPath.row]
         
-        // cell.detailTextLabel?.text = "sample text"
+        //cell.detailTextLabel?.text = "sample text"
         
         let imageName = indexPath.row % 5 + 1
         

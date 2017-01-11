@@ -120,7 +120,7 @@ class SectionView: UIView {
 
 // UIScrollViewDelegate: 为了显示滑动图片＋圆点控制
 // UIGestureRecognizerDelegate: 为了响应左右滑动
-class HomePageView: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDelegate {
+class HomePageView: UIScrollView, UIGestureRecognizerDelegate, UIScrollViewDelegate {
     var recFirstLineImage: [UIImage]?
     var recSecondLineImage: [UIImage]?
     var recFirstLineItemNumber: [Int]?, recSecondLineItemNumber: [Int]?
@@ -185,10 +185,6 @@ class HomePageView: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDeleg
         screenWidth = screenSize.width
         screenHeight = screenSize.height
         
-        self.isPagingEnabled = true
-        self.delegate = HomePageViewController()
-        self.showsVerticalScrollIndicator = true
-        
         let headerStartHeight:CGFloat = 0.0
         let sectionHeight:CGFloat = 200.0
         
@@ -215,6 +211,7 @@ class HomePageView: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDeleg
         headerView?.addSubview(headerImageView3)
         
         headerView?.isPagingEnabled = true
+        headerView?.delegate = self
         headerView?.contentSize = CGSize(width: screenWidth * 3, height: sectionHeight)
         
         pageControl = UIPageControl()

@@ -62,6 +62,11 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate
         
         homePageView?.contentSize = CGSize(width: screenWidth, height: pageHeight)
         
+        homePageView?.isPagingEnabled = true
+        // self.delegate = HomePageViewController()
+        homePageView?.delegate = self
+        homePageView?.showsVerticalScrollIndicator = true
+        
         homePageView?.backgroundColor = UIColor.white
     }
     
