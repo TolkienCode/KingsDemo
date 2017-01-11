@@ -21,6 +21,10 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
     var secondView:UIView?;
     var titleLabel: UILabel?;
     var descritpionLable: UILabel?;
+    var priceLabel: UILabel?;
+    
+    
+    var addButton: UIButton?;
     
     
     override func viewDidLoad() {
@@ -126,7 +130,7 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         
         secondView = UIView();
         secondView?.frame = CGRect(x:0.0, y:screenHeight/5*3, width: screenWidth, height: screenHeight/5*2);
-        secondView?.backgroundColor = UIColor.lightGray;
+        secondView?.backgroundColor = UIColor.white;
         
         titleLabel = UILabel();
         titleLabel?.frame = CGRect(x:0.0, y:0.0, width: screenWidth, height: screenHeight/5*2/4);
@@ -140,13 +144,15 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         secondView?.addSubview(descritpionLable!);
     }
     
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     // 在界面上直接点击白色灰色小点跳转到相应图片的时候调用的方法
-    func pageControlValueChange(sender: AnyObject?) {
+    func pageControlValueChange(sender: AnyObject?)
+    {
         let pageControl: UIPageControl? = sender as? UIPageControl
         let currentIndex = pageControl!.currentPage
         let offsetX: CGFloat = (CGFloat) (currentIndex) * screenWidth
@@ -155,7 +161,8 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
     }
     
     // 不知道什么时候掉用，大概是停止滑动的时候
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)
+    {
         let offsetX = scrollView.contentOffset.x
         let currentIndex = (Int)(offsetX / screenWidth)
         print("currentindex \(currentIndex)")
@@ -164,9 +171,12 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
 
     // 识别左右滑动的动作
     // Debugging - All Swipes Are Detected Now
-    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
-        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-            switch swipeGesture.direction {
+    func respondToSwipeGesture(gesture: UIGestureRecognizer)
+    {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer
+        {
+            switch swipeGesture.direction
+            {
             case UISwipeGestureRecognizerDirection.right:
                 let offsetX = shopDetailHeaderView?.contentOffset.x
                 let currentIndex = (Int)(offsetX! / screenWidth)
