@@ -133,10 +133,12 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         secondView?.backgroundColor = UIColor.white;
         
         titleLabel = UILabel();
-        titleLabel?.frame = CGRect(x:0.0, y:0.0, width: screenWidth, height: screenHeight/5*2/4);
+        titleLabel?.frame = CGRect(x:0.0, y:0.0, width: screenWidth, height: screenHeight/5*2/4*1);
         //titleLabel?.backgroundColor = UIColor.lightGray;
-        titleLabel?.text = "天上之玉（商品编号: Y10023033）";
+        titleLabel?.text = " 商品名称 - 天上之玉（商品编号: Y10023033）";
         secondView?.addSubview(titleLabel!);
+        
+        //priceLabel =
         
         descritpionLable=UILabel();
         descritpionLable?.frame=CGRect(x:0.0, y:0.0, width: screenWidth, height: screenHeight/5*2/4*3);
