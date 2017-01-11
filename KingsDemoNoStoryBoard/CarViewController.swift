@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+
+
 class CarViewCell: UITableViewCell
 {
     override init(style: UITableViewCellStyle, reuseIdentifier: String!)
@@ -23,7 +26,10 @@ class CarViewCell: UITableViewCell
 
 class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
-
+    var carNavigation:UINavigationBar?;
+    var rightButton: UIBarButtonItem?
+    var navItem: UINavigationItem?
+    
     var itemsToLoad: [String] = ["One", "Two", "Three"];
     var imgToload: [String] = ["Car1", "Car2", "Car3"];
     
@@ -31,11 +37,23 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     {
         super.viewDidLoad()
 
+        
+        carNavigation = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: navigationBarHeight));
+        carNavigation!.backgroundColor=UIColor.white;
+        rightButton = UIBarButtonItem(title: "洽谈", style: .done, target: nil, action: nil);
+        navItem = UINavigationItem(title: "豪车秀");
+        navItem!.rightBarButtonItem = rightButton;
+        
+        carNavigation!.setItems([navItem!], animated: false)
+        
+        
+        
+        
         // Do any additional setup after loading the view.
         let myTableView: UITableView = UITableView()
         
         //myTableView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
-        myTableView.frame = CGRect(x: CGFloat(0.0), y: CGFloat(0.0), width: screenWidth, height: screenHeight);
+        myTableView.frame = CGRect(x: CGFloat(0.0), y: navigationBarHeight, width: screenWidth, height: screenHeight);
         myTableView.dataSource = self;
         myTableView.delegate = self;
         myTableView.rowHeight = screenHeight/3 - 30;
@@ -43,6 +61,7 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         myTableView.register(CarViewCell.self, forCellReuseIdentifier: "CarViewCell")
         
+        self.view.addSubview(carNavigation!);
         self.view.addSubview(myTableView)
         
     }

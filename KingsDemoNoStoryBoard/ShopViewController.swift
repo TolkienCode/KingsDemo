@@ -48,8 +48,8 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var myTableView3: UITableView = UITableView()
     var myTableView4: UITableView = UITableView()
     
-    var itemsToLoad: [String] = ["One", "Two", "Three", "Four", "Five"]
-    var pageTitles: [String] = ["春之绿", "夏之=。=", "秋之=。=", "冬之=。="]
+    var itemsToLoad: [String] = ["One", "Two", "Three", "Four", "Five"];
+    var pageTitles: [String] = ["春之绿", "夏之魅", "秋之韵", "冬之洁"];
     
     var rightButton: UIBarButtonItem?
     var navItem: UINavigationItem?
