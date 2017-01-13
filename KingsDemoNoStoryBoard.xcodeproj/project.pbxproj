@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		452E56051E260CE300B632AB /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 452E56041E260CE300B632AB /* user.png */; };
 		452E56071E260D0000B632AB /* defaultphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 452E56061E260D0000B632AB /* defaultphoto.png */; };
+		453CE0C81E29388F00B2CA0B /* cargoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CE0C71E29388F00B2CA0B /* cargoViewController.swift */; };
 		45A9DF741E23CDF80043A95F /* usrIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 45A9DF731E23CDF80043A95F /* usrIcon.png */; };
 		45F091F11E24BE22006A8414 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F091F01E24BE22006A8414 /* CarViewController.swift */; };
 		45F091F71E24E89F006A8414 /* Car1.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F091F41E24E89F006A8414 /* Car1.png */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		452E56041E260CE300B632AB /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		452E56061E260D0000B632AB /* defaultphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultphoto.png; sourceTree = "<group>"; };
+		453CE0C71E29388F00B2CA0B /* cargoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cargoViewController.swift; sourceTree = "<group>"; };
 		45A9DF731E23CDF80043A95F /* usrIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usrIcon.png; sourceTree = "<group>"; };
 		45F091F01E24BE22006A8414 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		45F091F41E24E89F006A8414 /* Car1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Car1.png; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		73B969081E160FCB000B829C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				453CE0C71E29388F00B2CA0B /* cargoViewController.swift */,
 				73B969131E1618B4000B829C /* ShopDetailViewController.swift */,
 				73B969091E160FE6000B829C /* ShopViewController.swift */,
 				73B9690B1E1611B7000B829C /* TabViewController.swift */,
@@ -341,6 +344,7 @@
 				45F091F11E24BE22006A8414 /* CarViewController.swift in Sources */,
 				73B969141E1618B4000B829C /* ShopDetailViewController.swift in Sources */,
 				732C26A71E1656D100B7D2C9 /* SearchPageView.swift in Sources */,
+				453CE0C81E29388F00B2CA0B /* cargoViewController.swift in Sources */,
 				73B9690A1E160FE6000B829C /* ShopViewController.swift in Sources */,
 				732C26A91E16574C00B7D2C9 /* HomePageView.swift in Sources */,
 				73B968D71E160E5C000B829C /* AppDelegate.swift in Sources */,

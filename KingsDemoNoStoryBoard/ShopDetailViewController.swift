@@ -20,10 +20,14 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
     var navigationBar: UINavigationBar?
     var detailView:UIView?;
     var titleLabel: UILabel?;
-    var descritpionLable: UILabel?;
     var priceLabel: UILabel?;
+    var descritpion: UITextView?;
     
     
+    
+    var addButton: UIButton?;
+    var attButton: UIButton?;
+    var buyButton: UIButton?;
     var bottomView: UIView?;
     
     var picViewHeight:CGFloat?;
@@ -31,7 +35,7 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
     var bottomViewHeight: CGFloat?;
     
     
-    var addButton: UIButton?;
+    
     
     
     override func viewDidLoad() {
@@ -39,9 +43,9 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         // Do any additional setup after loading the view.
         
         
-        picViewHeight=(screenHeight - navigationBarHeight)/7*3;
-        detailViewHeight=(screenHeight - navigationBarHeight)/7*3;
-        bottomViewHeight=(screenHeight - navigationBarHeight)/7;
+        picViewHeight=(screenHeight - navigationBarHeight)/7*3 + 15;
+        detailViewHeight=(screenHeight - navigationBarHeight)/7*3 + 15;
+        bottomViewHeight=(screenHeight - navigationBarHeight)/7 - 30;
 
         setupNavigation();
         setupPageView();
@@ -149,24 +153,29 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         detailView?.backgroundColor = UIColor.white;
         
         titleLabel = UILabel();
-        titleLabel?.frame = CGRect(x:0.0, y:0.0, width: screenWidth, height: detailViewHeight! / 6)//screenHeight/5*2/4*1);
+        titleLabel?.frame = CGRect(x:0.0, y:0.0, width: screenWidth, height: detailViewHeight! / 8);
         //titleLabel?.backgroundColor = UIColor.lightGray;
-        titleLabel?.text = " 商品名称 - 天上之玉（商品编号: Y10023033)";
+        titleLabel?.text = " 商品名称 : 演示商品（商品编号: Y10023033)";
         detailView?.addSubview(titleLabel!);
         
         priceLabel = UILabel();
-        priceLabel?.frame = CGRect(x:0.0, y:picViewHeight! / 5, width: screenWidth, height: detailViewHeight! / 6)//screenHeight/5*2/4*1);
+        priceLabel?.frame = CGRect(x:0.0, y:detailViewHeight! / 8, width: screenWidth, height: detailViewHeight! / 8);
         //titleLabel?.font = UIFont.smallSystemFontSize;
         priceLabel?.textColor = UIColor.red;
         //titleLabel?.font=
-        priceLabel?.text = "¥: 666";
+        priceLabel?.text = " 价格：¥: 666";
         detailView?.addSubview(priceLabel!);
         
         
-        descritpionLable=UILabel();
-        descritpionLable?.frame=CGRect(x:0.0, y:picViewHeight! / 5 * 2, width: screenWidth, height: detailViewHeight! / 6)//screenHeight/5*2/4*2);
-        descritpionLable?.text = "集合天地之灵气";
-        detailView?.addSubview(descritpionLable!);
+        descritpion=UITextView();
+        descritpion?.frame=CGRect(x:0.0, y:detailViewHeight! / 8 * 2, width: screenWidth, height: detailViewHeight! / 8 * 6);
+        //descritpion!.layer.borderWidth = 1  //边框粗细
+        descritpion!.layer.borderColor = UIColor.gray.cgColor //边框颜色
+        descritpion!.isEditable = false;
+        descritpion!.isSelectable = true;
+        //descritpion!.font = UIFont.systemFontSize;
+        descritpion?.text = "商品介绍：\n" + "千年血玉为什么会跟血扯上关系？其实主要的依据就是它像血一样红的外观和传说。现在我们就一探究竟，看看千年血玉到底是什么样。\n" + "传说中的千年血玉并不是天然形成的，它那沁入内里的红色，其实是透了血的结果。这到底是怎么一回事？要追溯于人的尸体。当人下葬的时候，作为衔玉的玉器，会被强行塞到人口，随着最后一口气咽下进入咽喉处。咽喉处血管密集，玉器与血经历岁月的融合，便会形成血玉。传说就是这个样子，但事实真的如此吗？其实这是一种不科学的说法！血在地下是会碳化的，更不可能会像无机物那样沁入玉器的里。对于千年血玉的形成，其实是由铁元素造成的。出土血玉显现的红色是因为地下土壤中含有的铁元素或者是陪葬的铁制品被氧化分解，最终沁入玉体里。所以千年血玉才看起来那么红！"
+        detailView?.addSubview(descritpion!);
         
         
         
@@ -179,9 +188,20 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         bottomView?.frame = CGRect(x:0.0, y: navigationBarHeight + picViewHeight! + detailViewHeight!, width: screenWidth, height: bottomViewHeight!);
         bottomView?.backgroundColor = UIColor.white;
         
-        addButton = UIButton(frame: CGRect(x: screenWidth/3*2, y: 0.0, width: screenWidth/3, height: bottomViewHeight!))
+        
+        attButton = UIButton(frame: CGRect(x: 0.0, y: 0.0 + 5 , width: screenWidth/3, height: bottomViewHeight! - 5 ))
+        attButton?.setTitle("关注商品", for: .normal)
+        attButton?.backgroundColor = UIColor.blue;
+        bottomView?.addSubview(attButton!);
+        
+        buyButton = UIButton(frame: CGRect(x: screenWidth/3*1, y: 0.0 + 5, width: screenWidth/3, height: bottomViewHeight! - 5 ))
+        buyButton?.setTitle("收藏店铺", for: .normal)
+        buyButton?.backgroundColor = UIColor.red;
+        bottomView?.addSubview(buyButton!);
+ 
+        addButton = UIButton(frame: CGRect(x: screenWidth/3*2, y: 0.0 + 5, width: screenWidth/3, height: bottomViewHeight! - 5 ))
         addButton?.setTitle("加入购物车", for: .normal)
-        addButton?.backgroundColor = UIColor.red
+        addButton?.backgroundColor = UIColor.orange;
         bottomView?.addSubview(addButton!);
         
     }
