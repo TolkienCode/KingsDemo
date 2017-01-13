@@ -21,6 +21,7 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
     var detailView:UIView?;
     var titleLabel: UILabel?;
     var priceLabel: UILabel?;
+    var commitLabel: UILabel?;
     var descritpion: UITextView?;
     
     
@@ -43,9 +44,9 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         // Do any additional setup after loading the view.
         
         
-        picViewHeight=(screenHeight - navigationBarHeight)/7*3 + 15;
-        detailViewHeight=(screenHeight - navigationBarHeight)/7*3 + 15;
-        bottomViewHeight=(screenHeight - navigationBarHeight)/7 - 30;
+        picViewHeight=(screenHeight - navigationBarHeight)/7*3 + 16;
+        detailViewHeight=(screenHeight - navigationBarHeight)/7*3 + 16;
+        bottomViewHeight=(screenHeight - navigationBarHeight)/7 - 32;
 
         setupNavigation();
         setupPageView();
@@ -153,13 +154,13 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         detailView?.backgroundColor = UIColor.white;
         
         titleLabel = UILabel();
-        titleLabel?.frame = CGRect(x:0.0, y:0.0, width: screenWidth, height: detailViewHeight! / 8);
+        titleLabel?.frame = CGRect(x:0.0, y:0.0, width: screenWidth, height: detailViewHeight! / 9);
         //titleLabel?.backgroundColor = UIColor.lightGray;
-        titleLabel?.text = " 商品名称 : 演示商品（商品编号: Y10023033)";
+        titleLabel?.text = " 演示商品（商品编号: Y10023033)";
         detailView?.addSubview(titleLabel!);
         
         priceLabel = UILabel();
-        priceLabel?.frame = CGRect(x:0.0, y:detailViewHeight! / 8, width: screenWidth, height: detailViewHeight! / 8);
+        priceLabel?.frame = CGRect(x:0.0, y:detailViewHeight! / 9, width: screenWidth, height: detailViewHeight! / 9);
         //titleLabel?.font = UIFont.smallSystemFontSize;
         priceLabel?.textColor = UIColor.red;
         //titleLabel?.font=
@@ -167,8 +168,16 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         detailView?.addSubview(priceLabel!);
         
         
+        commitLabel = UILabel();
+        commitLabel?.frame = CGRect(x:0.0, y:detailViewHeight! / 9 * 2, width: screenWidth, height: detailViewHeight! / 9);
+        //titleLabel?.font = UIFont.smallSystemFontSize;
+        commitLabel?.textColor = UIColor.black;
+        //titleLabel?.font=
+        commitLabel?.text = " 累计评价 - 暂无";
+        detailView?.addSubview(commitLabel!);
+        
         descritpion=UITextView();
-        descritpion?.frame=CGRect(x:0.0, y:detailViewHeight! / 8 * 2, width: screenWidth, height: detailViewHeight! / 8 * 6);
+        descritpion?.frame=CGRect(x:0.0, y:detailViewHeight! / 9 * 3, width: screenWidth, height: detailViewHeight! / 9 * 6);
         //descritpion!.layer.borderWidth = 1  //边框粗细
         descritpion!.layer.borderColor = UIColor.gray.cgColor //边框颜色
         descritpion!.isEditable = false;
@@ -189,17 +198,17 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         bottomView?.backgroundColor = UIColor.white;
         
         
-        attButton = UIButton(frame: CGRect(x: 0.0, y: 0.0 + 5 , width: screenWidth/3, height: bottomViewHeight! - 5 ))
+        attButton = UIButton(frame: CGRect(x: 0.0, y: 0.0 + 6 , width: screenWidth/3, height: bottomViewHeight! - 6 ))
         attButton?.setTitle("关注商品", for: .normal)
         attButton?.backgroundColor = UIColor.blue;
         bottomView?.addSubview(attButton!);
         
-        buyButton = UIButton(frame: CGRect(x: screenWidth/3*1, y: 0.0 + 5, width: screenWidth/3, height: bottomViewHeight! - 5 ))
+        buyButton = UIButton(frame: CGRect(x: screenWidth/3*1, y: 0.0 + 6, width: screenWidth/3, height: bottomViewHeight! - 6 ))
         buyButton?.setTitle("收藏店铺", for: .normal)
         buyButton?.backgroundColor = UIColor.red;
         bottomView?.addSubview(buyButton!);
  
-        addButton = UIButton(frame: CGRect(x: screenWidth/3*2, y: 0.0 + 5, width: screenWidth/3, height: bottomViewHeight! - 5 ))
+        addButton = UIButton(frame: CGRect(x: screenWidth/3*2, y: 0.0 + 6, width: screenWidth/3, height: bottomViewHeight! - 6 ))
         addButton?.setTitle("加入购物车", for: .normal)
         addButton?.backgroundColor = UIColor.orange;
         bottomView?.addSubview(addButton!);
