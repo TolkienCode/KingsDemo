@@ -18,15 +18,17 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
     
     let navigationBarHeight: CGFloat = 64.0
     var navigationBar: UINavigationBar?
-    var secondView:UIView?;
+    var detailView:UIView?;
     var titleLabel: UILabel?;
     var descritpionLable: UILabel?;
     var priceLabel: UILabel?;
     
     
+    var bottomView: UIView?;
+    
     var picViewHeight:CGFloat?;
     var detailViewHeight: CGFloat?;
-    var bottonViewHeight: CGFloat?;
+    var bottomViewHeight: CGFloat?;
     
     
     var addButton: UIButton?;
@@ -39,14 +41,17 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         
         picViewHeight=(screenHeight - navigationBarHeight)/7*3;
         detailViewHeight=(screenHeight - navigationBarHeight)/7*3;
-        bottonViewHeight=(screenHeight - navigationBarHeight)/7;
+        bottomViewHeight=(screenHeight - navigationBarHeight)/7;
 
         setupNavigation();
         setupPageView();
+        setupDetailView();
+        setupBottomView();
         
         self.view.addSubview(navigationBar!);
         self.view.addSubview(shopDetailView!);
-        self.view.addSubview(secondView!);
+        self.view.addSubview(detailView!);
+        self.view.addSubview(bottomView!);
         print("shop detail view loaded")
     }
 
@@ -73,29 +78,29 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
     }
     
     private func setupPageView() {
-        shopDetailView = UIScrollView(frame: CGRect(x:0.0, y:0.0 + navigationBarHeight, width: screenWidth, height: screenHeight/5*3))
+        shopDetailView = UIScrollView(frame: CGRect(x:0.0, y:0.0 + navigationBarHeight, width: screenWidth, height: detailViewHeight!))
         shopDetailView?.isPagingEnabled = true
         shopDetailView?.delegate = self
         shopDetailView?.showsVerticalScrollIndicator = true
         shopDetailView?.contentSize = CGSize(width: screenWidth, height: pageHeight)
         
-        let imageHeight = (screenHeight - navigationBarHeight) / 2
+        //let imageHeight = (screenHeight - navigationBarHeight) / 2
         
-        shopDetailHeaderView = UIScrollView(frame: CGRect(x:0.0, y:0.0, width: screenWidth, height: imageHeight))
+        shopDetailHeaderView = UIScrollView(frame: CGRect(x:0.0, y:0.0, width: screenWidth, height: picViewHeight!))
         shopDetailHeaderView?.showsVerticalScrollIndicator = false
         
         let headerImage1 = UIImage(named: "1")
-        let headerImageView1 = UIImageView(frame: CGRect(x:0.0, y:0.0, width: screenWidth, height: imageHeight))
+        let headerImageView1 = UIImageView(frame: CGRect(x:0.0, y:0.0, width: screenWidth, height: picViewHeight!))
         headerImageView1.image = headerImage1
         headerImageView1.contentMode = .scaleToFill
         
         let headerImage2 = UIImage(named: "2")
-        let headerImageView2 = UIImageView(frame: CGRect(x:0.0 + screenWidth, y:0.0, width:screenWidth, height:imageHeight))
+        let headerImageView2 = UIImageView(frame: CGRect(x:0.0 + screenWidth, y:0.0, width:screenWidth, height:picViewHeight!))
         headerImageView2.image = headerImage2
         headerImageView2.contentMode = .scaleToFill
         
         let headerImage3 = UIImage(named: "3")
-        let headerImageView3 = UIImageView(frame: CGRect(x:0.0 + screenWidth * 2, y:0.0, width:screenWidth, height:imageHeight))
+        let headerImageView3 = UIImageView(frame: CGRect(x:0.0 + screenWidth * 2, y:0.0, width:screenWidth, height:picViewHeight!))
         headerImageView3.image = headerImage3
         headerImageView3.contentMode = .scaleToFill
         
@@ -104,11 +109,11 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         shopDetailHeaderView?.addSubview(headerImageView3)
         
         shopDetailHeaderView?.isPagingEnabled = true
-        shopDetailHeaderView?.contentSize = CGSize(width: screenWidth * 3, height: imageHeight)
+        shopDetailHeaderView?.contentSize = CGSize(width: screenWidth * 3, height: picViewHeight!)
         
         pageControl = UIPageControl()
         let pageContrlX = (CGFloat) (screenWidth - 80)
-        pageControl?.frame = CGRect(x: pageContrlX, y: imageHeight - 20.0, width: 80, height: 20)
+        pageControl?.frame = CGRect(x: pageContrlX, y: picViewHeight! - 20.0, width: 80, height: 20)
         pageControl?.numberOfPages = 3
         pageControl?.currentPage = 0
         pageControl?.addTarget(self, action: #selector(pageControlValueChange(sender:)), for: .valueChanged)
@@ -131,43 +136,53 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         shopDetailView?.addSubview(shopDetailHeaderView!)
         shopDetailView?.addSubview(pageControl!)
     
+    }
+    
+    
+    private func setupDetailView()
+    {
         
-        let secondViewStart = screenHeight / 2 + navigationBarHeight
+        //let secondViewStart = screenHeight / 2 + navigationBarHeight
         
-        secondView = UIView();
-        secondView?.frame = CGRect(x:0.0, y:secondViewStart, width: screenWidth, height: (screenHeight - navigationBarHeight)/2);
-        secondView?.backgroundColor = UIColor.white;
+        detailView = UIView();
+        detailView?.frame = CGRect(x:0.0, y: navigationBarHeight + picViewHeight!, width: screenWidth, height: detailViewHeight!);
+        detailView?.backgroundColor = UIColor.white;
         
         titleLabel = UILabel();
-        titleLabel?.frame = CGRect(x:0.0, y:0.0, width: screenWidth, height: imageHeight / 5)//screenHeight/5*2/4*1);
+        titleLabel?.frame = CGRect(x:0.0, y:0.0, width: screenWidth, height: detailViewHeight! / 6)//screenHeight/5*2/4*1);
         //titleLabel?.backgroundColor = UIColor.lightGray;
         titleLabel?.text = " 商品名称 - 天上之玉（商品编号: Y10023033)";
-        secondView?.addSubview(titleLabel!);
+        detailView?.addSubview(titleLabel!);
         
         priceLabel = UILabel();
-        priceLabel?.frame = CGRect(x:0.0, y:imageHeight / 5, width: screenWidth, height: imageHeight / 5)//screenHeight/5*2/4*1);
+        priceLabel?.frame = CGRect(x:0.0, y:picViewHeight! / 5, width: screenWidth, height: detailViewHeight! / 6)//screenHeight/5*2/4*1);
         //titleLabel?.font = UIFont.smallSystemFontSize;
         priceLabel?.textColor = UIColor.red;
         //titleLabel?.font=
         priceLabel?.text = "¥: 666";
-        secondView?.addSubview(priceLabel!);2
-
+        detailView?.addSubview(priceLabel!);
+        
         
         descritpionLable=UILabel();
-        descritpionLable?.frame=CGRect(x:0.0, y:imageHeight / 5 * 2, width: screenWidth, height: imageHeight / 5)//screenHeight/5*2/4*2);
+        descritpionLable?.frame=CGRect(x:0.0, y:picViewHeight! / 5 * 2, width: screenWidth, height: detailViewHeight! / 6)//screenHeight/5*2/4*2);
         descritpionLable?.text = "集合天地之灵气";
-        secondView?.addSubview(descritpionLable!);
+        detailView?.addSubview(descritpionLable!);
         
         
-        addButton = UIButton(frame: CGRect(x: screenWidth/3*2, y: imageHeight / 5 * 3, width: screenWidth/3, height: imageHeight / 5)) //screenHeight/5*2/4*1);
-        addButton?.setTitle("加入购物车", for: .normal)
-        addButton?.backgroundColor = UIColor.red
-        secondView?.addSubview(addButton!);
+        
+
     }
     
-    
-    private func setupBottonView()
+    private func setupBottomView()
     {
+        bottomView = UIView();
+        bottomView?.frame = CGRect(x:0.0, y: navigationBarHeight + picViewHeight! + detailViewHeight!, width: screenWidth, height: bottomViewHeight!);
+        bottomView?.backgroundColor = UIColor.white;
+        
+        addButton = UIButton(frame: CGRect(x: screenWidth/3*2, y: 0.0, width: screenWidth/3, height: bottomViewHeight!))
+        addButton?.setTitle("加入购物车", for: .normal)
+        addButton?.backgroundColor = UIColor.red
+        bottomView?.addSubview(addButton!);
         
     }
     
