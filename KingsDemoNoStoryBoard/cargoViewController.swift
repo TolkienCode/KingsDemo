@@ -65,28 +65,32 @@ class cargoViewController: UIViewController
     
     private func setContent()
     {
-        self.contentHeight = (screenHeight - self.navigationBarHeight)/11*10;
+        self.contentHeight = (screenHeight - self.navigationBarHeight)/12*11;
         
         self.contentView = UIView();
         self.contentView!.frame = CGRect(x:0.0, y: navigationBarHeight, width: screenWidth, height: self.contentHeight!);
         self.contentView!.backgroundColor = UIColor.white;
+        
+        
+        
+        
     }
     
     private func setBottom()
     {
-        self.bottomHeight = (screenHeight - self.navigationBarHeight)/11;
+        self.bottomHeight = (screenHeight - self.navigationBarHeight)/12;
         
         self.bottomView = UIView();
         self.bottomView!.frame = CGRect(x:0.0, y: navigationBarHeight + self.contentHeight!, width: screenWidth, height: self.bottomHeight!);
         self.bottomView!.backgroundColor = UIColor.lightGray;
         
-        self.thinkBtn = UIButton(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth/2, height: bottomHeight! ))
-        thinkBtn?.setTitle("再考虑下", for: .normal)
+        self.thinkBtn = UIButton(frame: CGRect(x: 0.0, y: screenWidth/5*4, width: screenWidth/5, height: bottomHeight! ))
+        thinkBtn?.setTitle("再逛逛", for: .normal)
         thinkBtn?.backgroundColor = UIColor.orange;
         bottomView?.addSubview(thinkBtn!);
         
-        self.orderBtn = UIButton(frame: CGRect(x: screenWidth/2, y: 0.0, width: screenWidth/2, height: bottomHeight! ))
-        orderBtn?.setTitle("确认下单", for: .normal)
+        self.orderBtn = UIButton(frame: CGRect(x: screenWidth/5*4, y: 0.0, width: screenWidth/5, height: bottomHeight! ))
+        orderBtn?.setTitle("去结算", for: .normal)
         orderBtn?.backgroundColor = UIColor.red;
         bottomView?.addSubview(orderBtn!);
         

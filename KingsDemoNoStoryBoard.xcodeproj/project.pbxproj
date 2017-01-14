@@ -264,7 +264,6 @@
 				TargetAttributes = {
 					73B968D21E160E5C000B829C = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = N7889B7KPX;
 						ProvisioningStyle = Automatic;
 					};
 					73B968E61E160E5C000B829C = {
@@ -479,10 +478,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = N7889B7KPX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KingsDemoNoStoryBoard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huzhl.KingsDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huzhl.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -493,10 +492,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = N7889B7KPX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KingsDemoNoStoryBoard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huzhl.KingsDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huzhl.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
