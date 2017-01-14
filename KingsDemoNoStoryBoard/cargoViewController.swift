@@ -22,6 +22,8 @@ class cargoViewController: UIViewController
     var bottomView:UIView?;
     var orderBtn:UIButton?;
     var thinkBtn:UIButton?;
+    var listImg:UIImageView?;
+    var priceImg:UIImageView?;
     
     
     
@@ -71,9 +73,14 @@ class cargoViewController: UIViewController
         self.contentView!.frame = CGRect(x:0.0, y: navigationBarHeight, width: screenWidth, height: self.contentHeight!);
         self.contentView!.backgroundColor = UIColor.white;
         
+        self.listImg = UIImageView();
+        self.listImg?.image = UIImage(named:"cart");
+        self.listImg?.frame = CGRect(x:0.0, y:0.0, width:screenWidth, height:self.contentHeight!);
         
-        
-        
+        self.contentView?.addSubview(listImg!);
+
+       
+
     }
     
     private func setBottom()
@@ -84,13 +91,21 @@ class cargoViewController: UIViewController
         self.bottomView!.frame = CGRect(x:0.0, y: navigationBarHeight + self.contentHeight!, width: screenWidth, height: self.bottomHeight!);
         self.bottomView!.backgroundColor = UIColor.lightGray;
         
-        self.thinkBtn = UIButton(frame: CGRect(x: 0.0, y: screenWidth/5*4, width: screenWidth/5, height: bottomHeight! ))
-        thinkBtn?.setTitle("再逛逛", for: .normal)
+        self.priceImg = UIImageView();
+        self.priceImg?.image = UIImage(named:"totalprice");
+        self.priceImg?.frame = CGRect(x:0.0, y:0.0, width:screenWidth/5 * 3 + 10, height:self.bottomHeight!);
+        bottomView?.addSubview(self.priceImg!);
+        
+        
+        self.thinkBtn = UIButton(frame: CGRect(x: screenWidth/5*3 + 10, y: 0.0, width: screenWidth/5 - 5, height: bottomHeight!))
+        thinkBtn?.setTitle("再逛逛", for: .normal);
+        thinkBtn?.titleLabel?.font = UIFont.systemFont(ofSize: 12);
         thinkBtn?.backgroundColor = UIColor.orange;
         bottomView?.addSubview(thinkBtn!);
         
-        self.orderBtn = UIButton(frame: CGRect(x: screenWidth/5*4, y: 0.0, width: screenWidth/5, height: bottomHeight! ))
+        self.orderBtn = UIButton(frame: CGRect(x: screenWidth/5*4 + 5, y: 0.0, width: screenWidth/5 - 5, height: bottomHeight!))
         orderBtn?.setTitle("去结算", for: .normal)
+        orderBtn?.titleLabel?.font = UIFont.systemFont(ofSize: 12);
         orderBtn?.backgroundColor = UIColor.red;
         bottomView?.addSubview(orderBtn!);
         
