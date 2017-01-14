@@ -56,9 +56,15 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate
     {
         // Do any additional setup after loading the view.
         // let y = (self.navigationController?.navigationBar.frame.height)! * -1
-        let recImage1 = UIImage(named: "1")
         
-        homePageView = HomePageView(frame: CGRect(x:0.0, y:navigationBarHeight, width:screenWidth, height:screenHeight), recFirstLineImage: [recImage1!, recImage1!, recImage1!], recSecondLineImage: [recImage1!, recImage1!, recImage1!], recFirstLineItemNumber: [1,2,3], recSecondLineItemNumber: [4,5,6])
+        let img1 = UIImage(named: "和田玉手镯1")!
+        let img2 = UIImage(named: "印1")!
+        let img3 = UIImage(named: "佛意菩提1")!
+        let img4 = UIImage(named: "玉佩1")!
+        let img5 = UIImage(named: "玉器工艺品1")!
+        let img6 = UIImage(named: "琉璃手串2")!
+        
+        homePageView = HomePageView(frame: CGRect(x:0.0, y:navigationBarHeight, width:screenWidth, height:screenHeight), recFirstLineImage: [img1, img2, img3], recSecondLineImage: [img4, img5, img6], recFirstLineItemNumber: [1,2,3], recSecondLineItemNumber: [4,5,6])
         
         homePageView?.contentSize = CGSize(width: screenWidth, height: pageHeight)
         

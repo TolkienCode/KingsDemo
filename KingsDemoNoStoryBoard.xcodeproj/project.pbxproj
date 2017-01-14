@@ -35,9 +35,25 @@
 		7346CBC81E2A588600B1C84A /* 玉器工艺品1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBB31E2A588600B1C84A /* 玉器工艺品1.png */; };
 		7346CBC91E2A588600B1C84A /* 玉器工艺品2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBB41E2A588600B1C84A /* 玉器工艺品2.png */; };
 		7346CBCA1E2A588600B1C84A /* 玉器工艺品3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBB51E2A588600B1C84A /* 玉器工艺品3.png */; };
-		7346CBCB1E2A588600B1C84A /* 紫叶小檀手串1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBB61E2A588600B1C84A /* 紫叶小檀手串1.png */; };
-		7346CBCC1E2A588600B1C84A /* 紫叶小檀手串2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBB71E2A588600B1C84A /* 紫叶小檀手串2.png */; };
-		7346CBCD1E2A588600B1C84A /* 紫叶小檀手串3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBB81E2A588600B1C84A /* 紫叶小檀手串3.png */; };
+		7346CBCB1E2A588600B1C84A /* 紫叶小檀手串1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBB61E2A588600B1C84A /* 紫叶小檀手串1.png */; };
+		7346CBCC1E2A588600B1C84A /* 紫叶小檀手串2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBB71E2A588600B1C84A /* 紫叶小檀手串2.png */; };
+		7346CBCD1E2A588600B1C84A /* 紫叶小檀手串3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBB81E2A588600B1C84A /* 紫叶小檀手串3.png */; };
+		7346CBD01E2A683900B1C84A /* 琉璃手串1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBCE1E2A683900B1C84A /* 琉璃手串1.png */; };
+		7346CBD11E2A683900B1C84A /* 琉璃手串2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBCF1E2A683900B1C84A /* 琉璃手串2.png */; };
+		7346CBD41E2A68D300B1C84A /* 和田玉手镯1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBD21E2A68D300B1C84A /* 和田玉手镯1.png */; };
+		7346CBD51E2A68D300B1C84A /* 和田玉手镯2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBD31E2A68D300B1C84A /* 和田玉手镯2.png */; };
+		7346CBD81E2A6A4100B1C84A /* 佛意菩提1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBD61E2A6A4100B1C84A /* 佛意菩提1.png */; };
+		7346CBD91E2A6A4100B1C84A /* 佛意菩提2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBD71E2A6A4100B1C84A /* 佛意菩提2.png */; };
+		7346CBDB1E2A6B6900B1C84A /* 绿松石手串1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBDA1E2A6B6900B1C84A /* 绿松石手串1.png */; };
+		7346CBDD1E2A6E0300B1C84A /* 绿松石手串2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBDC1E2A6E0300B1C84A /* 绿松石手串2.png */; };
+		7346CBE01E2A6E8700B1C84A /* 绿松石手串3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBDE1E2A6E8700B1C84A /* 绿松石手串3.png */; };
+		7346CBE11E2A6E8700B1C84A /* 绿松石手串4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBDF1E2A6E8700B1C84A /* 绿松石手串4.png */; };
+		7346CBE31E2A6EBB00B1C84A /* 绿松石手串5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBE21E2A6EBB00B1C84A /* 绿松石手串5.png */; };
+		7346CBE91E2A70FF00B1C84A /* 夏玉坠1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBE41E2A70FF00B1C84A /* 夏玉坠1.png */; };
+		7346CBEA1E2A70FF00B1C84A /* 夏玉坠2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBE51E2A70FF00B1C84A /* 夏玉坠2.png */; };
+		7346CBEB1E2A70FF00B1C84A /* 夏玉坠3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBE61E2A70FF00B1C84A /* 夏玉坠3.png */; };
+		7346CBEC1E2A70FF00B1C84A /* 夏玉坠4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBE71E2A70FF00B1C84A /* 夏玉坠4.png */; };
+		7346CBED1E2A70FF00B1C84A /* 夏玉坠5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBE81E2A70FF00B1C84A /* 夏玉坠5.png */; };
 		73B968D71E160E5C000B829C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B968D61E160E5C000B829C /* AppDelegate.swift */; };
 		73B968DE1E160E5C000B829C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73B968DD1E160E5C000B829C /* Assets.xcassets */; };
 		73B968EC1E160E5C000B829C /* KingsDemoNoStoryBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B968EB1E160E5C000B829C /* KingsDemoNoStoryBoardTests.swift */; };
@@ -96,9 +112,25 @@
 		7346CBB31E2A588600B1C84A /* 玉器工艺品1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "玉器工艺品1.png"; sourceTree = "<group>"; };
 		7346CBB41E2A588600B1C84A /* 玉器工艺品2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "玉器工艺品2.png"; sourceTree = "<group>"; };
 		7346CBB51E2A588600B1C84A /* 玉器工艺品3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "玉器工艺品3.png"; sourceTree = "<group>"; };
-		7346CBB61E2A588600B1C84A /* 紫叶小檀手串1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "\U001c紫叶小檀手串1.png"; sourceTree = "<group>"; };
-		7346CBB71E2A588600B1C84A /* 紫叶小檀手串2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "\U001c紫叶小檀手串2.png"; sourceTree = "<group>"; };
-		7346CBB81E2A588600B1C84A /* 紫叶小檀手串3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "\U001c紫叶小檀手串3.png"; sourceTree = "<group>"; };
+		7346CBB61E2A588600B1C84A /* 紫叶小檀手串1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "紫叶小檀手串1.png"; sourceTree = "<group>"; };
+		7346CBB71E2A588600B1C84A /* 紫叶小檀手串2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "紫叶小檀手串2.png"; sourceTree = "<group>"; };
+		7346CBB81E2A588600B1C84A /* 紫叶小檀手串3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "紫叶小檀手串3.png"; sourceTree = "<group>"; };
+		7346CBCE1E2A683900B1C84A /* 琉璃手串1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "琉璃手串1.png"; sourceTree = "<group>"; };
+		7346CBCF1E2A683900B1C84A /* 琉璃手串2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "琉璃手串2.png"; sourceTree = "<group>"; };
+		7346CBD21E2A68D300B1C84A /* 和田玉手镯1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "和田玉手镯1.png"; sourceTree = "<group>"; };
+		7346CBD31E2A68D300B1C84A /* 和田玉手镯2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "和田玉手镯2.png"; sourceTree = "<group>"; };
+		7346CBD61E2A6A4100B1C84A /* 佛意菩提1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "佛意菩提1.png"; sourceTree = "<group>"; };
+		7346CBD71E2A6A4100B1C84A /* 佛意菩提2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "佛意菩提2.png"; sourceTree = "<group>"; };
+		7346CBDA1E2A6B6900B1C84A /* 绿松石手串1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绿松石手串1.png"; sourceTree = "<group>"; };
+		7346CBDC1E2A6E0300B1C84A /* 绿松石手串2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绿松石手串2.png"; sourceTree = "<group>"; };
+		7346CBDE1E2A6E8700B1C84A /* 绿松石手串3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绿松石手串3.png"; sourceTree = "<group>"; };
+		7346CBDF1E2A6E8700B1C84A /* 绿松石手串4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绿松石手串4.png"; sourceTree = "<group>"; };
+		7346CBE21E2A6EBB00B1C84A /* 绿松石手串5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绿松石手串5.png"; sourceTree = "<group>"; };
+		7346CBE41E2A70FF00B1C84A /* 夏玉坠1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "夏玉坠1.png"; sourceTree = "<group>"; };
+		7346CBE51E2A70FF00B1C84A /* 夏玉坠2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "夏玉坠2.png"; sourceTree = "<group>"; };
+		7346CBE61E2A70FF00B1C84A /* 夏玉坠3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "夏玉坠3.png"; sourceTree = "<group>"; };
+		7346CBE71E2A70FF00B1C84A /* 夏玉坠4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "夏玉坠4.png"; sourceTree = "<group>"; };
+		7346CBE81E2A70FF00B1C84A /* 夏玉坠5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "夏玉坠5.png"; sourceTree = "<group>"; };
 		73B968D31E160E5C000B829C /* KingsDemoNoStoryBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KingsDemoNoStoryBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B968D61E160E5C000B829C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73B968DD1E160E5C000B829C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +177,17 @@
 		45A9DF721E23CD3B0043A95F /* img */ = {
 			isa = PBXGroup;
 			children = (
+				7346CBDA1E2A6B6900B1C84A /* 绿松石手串1.png */,
+				7346CBDC1E2A6E0300B1C84A /* 绿松石手串2.png */,
+				7346CBDE1E2A6E8700B1C84A /* 绿松石手串3.png */,
+				7346CBDF1E2A6E8700B1C84A /* 绿松石手串4.png */,
+				7346CBE21E2A6EBB00B1C84A /* 绿松石手串5.png */,
+				7346CBCE1E2A683900B1C84A /* 琉璃手串1.png */,
+				7346CBCF1E2A683900B1C84A /* 琉璃手串2.png */,
+				7346CBD21E2A68D300B1C84A /* 和田玉手镯1.png */,
+				7346CBD31E2A68D300B1C84A /* 和田玉手镯2.png */,
+				7346CBD61E2A6A4100B1C84A /* 佛意菩提1.png */,
+				7346CBD71E2A6A4100B1C84A /* 佛意菩提2.png */,
 				452E56061E260D0000B632AB /* defaultphoto.png */,
 				452E56041E260CE300B632AB /* user.png */,
 				45F091F41E24E89F006A8414 /* Car1.png */,
@@ -169,9 +212,14 @@
 				7346CBB31E2A588600B1C84A /* 玉器工艺品1.png */,
 				7346CBB41E2A588600B1C84A /* 玉器工艺品2.png */,
 				7346CBB51E2A588600B1C84A /* 玉器工艺品3.png */,
-				7346CBB61E2A588600B1C84A /* 紫叶小檀手串1.png */,
-				7346CBB71E2A588600B1C84A /* 紫叶小檀手串2.png */,
-				7346CBB81E2A588600B1C84A /* 紫叶小檀手串3.png */,
+				7346CBB61E2A588600B1C84A /* 紫叶小檀手串1.png */,
+				7346CBB71E2A588600B1C84A /* 紫叶小檀手串2.png */,
+				7346CBB81E2A588600B1C84A /* 紫叶小檀手串3.png */,
+				7346CBE41E2A70FF00B1C84A /* 夏玉坠1.png */,
+				7346CBE51E2A70FF00B1C84A /* 夏玉坠2.png */,
+				7346CBE61E2A70FF00B1C84A /* 夏玉坠3.png */,
+				7346CBE71E2A70FF00B1C84A /* 夏玉坠4.png */,
+				7346CBE81E2A70FF00B1C84A /* 夏玉坠5.png */,
 			);
 			name = img;
 			sourceTree = "<group>";
@@ -368,34 +416,50 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7346CBE31E2A6EBB00B1C84A /* 绿松石手串5.png in Resources */,
+				7346CBDD1E2A6E0300B1C84A /* 绿松石手串2.png in Resources */,
 				7346CBC91E2A588600B1C84A /* 玉器工艺品2.png in Resources */,
+				7346CBD81E2A6A4100B1C84A /* 佛意菩提1.png in Resources */,
 				7346CBCA1E2A588600B1C84A /* 玉器工艺品3.png in Resources */,
 				7346CBBE1E2A588600B1C84A /* 印3.png in Resources */,
 				7346CBBB1E2A588600B1C84A /* 蜜蜡3.png in Resources */,
 				7346CBBA1E2A588600B1C84A /* 蜜蜡2.png in Resources */,
+				7346CBED1E2A70FF00B1C84A /* 夏玉坠5.png in Resources */,
+				7346CBE01E2A6E8700B1C84A /* 绿松石手串3.png in Resources */,
+				7346CBE11E2A6E8700B1C84A /* 绿松石手串4.png in Resources */,
+				7346CBD41E2A68D300B1C84A /* 和田玉手镯1.png in Resources */,
 				7346CBC31E2A588600B1C84A /* 玉佩1.png in Resources */,
 				7346CBC81E2A588600B1C84A /* 玉器工艺品1.png in Resources */,
+				7346CBEC1E2A70FF00B1C84A /* 夏玉坠4.png in Resources */,
 				7346CBB91E2A588600B1C84A /* 蜜蜡1.png in Resources */,
 				7346CBC21E2A588600B1C84A /* 玉雕3.png in Resources */,
-				7346CBCC1E2A588600B1C84A /* 紫叶小檀手串2.png in Resources */,
+				7346CBCC1E2A588600B1C84A /* 紫叶小檀手串2.png in Resources */,
+				7346CBD01E2A683900B1C84A /* 琉璃手串1.png in Resources */,
 				7346CBC41E2A588600B1C84A /* 玉佩2.png in Resources */,
-				7346CBCD1E2A588600B1C84A /* 紫叶小檀手串3.png in Resources */,
+				7346CBCD1E2A588600B1C84A /* 紫叶小檀手串3.png in Resources */,
+				7346CBD51E2A68D300B1C84A /* 和田玉手镯2.png in Resources */,
 				7346CBC51E2A588600B1C84A /* 玉佩3.png in Resources */,
 				45F091F91E24E89F006A8414 /* Car3.png in Resources */,
 				7346CBBC1E2A588600B1C84A /* 印1.png in Resources */,
 				7346CBC01E2A588600B1C84A /* 玉雕1.png in Resources */,
 				73B968DE1E160E5C000B829C /* Assets.xcassets in Resources */,
+				7346CBD91E2A6A4100B1C84A /* 佛意菩提2.png in Resources */,
 				7346CBC61E2A588600B1C84A /* 玉佩4.png in Resources */,
 				7346CBBF1E2A588600B1C84A /* 印4.png in Resources */,
 				452E56051E260CE300B632AB /* user.png in Resources */,
+				7346CBD11E2A683900B1C84A /* 琉璃手串2.png in Resources */,
 				7346CBC11E2A588600B1C84A /* 玉雕2.png in Resources */,
 				452E56071E260D0000B632AB /* defaultphoto.png in Resources */,
 				45F091F81E24E89F006A8414 /* Car2.png in Resources */,
 				45F091F71E24E89F006A8414 /* Car1.png in Resources */,
 				45A9DF741E23CDF80043A95F /* usrIcon.png in Resources */,
-				7346CBCB1E2A588600B1C84A /* 紫叶小檀手串1.png in Resources */,
+				7346CBCB1E2A588600B1C84A /* 紫叶小檀手串1.png in Resources */,
+				7346CBE91E2A70FF00B1C84A /* 夏玉坠1.png in Resources */,
 				7346CBBD1E2A588600B1C84A /* 印2.png in Resources */,
+				7346CBEB1E2A70FF00B1C84A /* 夏玉坠3.png in Resources */,
+				7346CBEA1E2A70FF00B1C84A /* 夏玉坠2.png in Resources */,
 				7346CBC71E2A588600B1C84A /* 玉佩5.png in Resources */,
+				7346CBDB1E2A6B6900B1C84A /* 绿松石手串1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
