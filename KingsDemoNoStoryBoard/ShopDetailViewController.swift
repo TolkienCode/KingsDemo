@@ -94,17 +94,17 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         shopDetailHeaderView?.showsVerticalScrollIndicator = false
         shopDetailHeaderView?.delegate = self;
         
-        let headerImage1 = UIImage(named: "1")
+        let headerImage1 = UIImage(named: "宝贝详情1")
         let headerImageView1 = UIImageView(frame: CGRect(x:0.0, y:0.0, width: screenWidth, height: picViewHeight!))
         headerImageView1.image = headerImage1
         headerImageView1.contentMode = .scaleToFill
         
-        let headerImage2 = UIImage(named: "2")
+        let headerImage2 = UIImage(named: "宝贝详情2")
         let headerImageView2 = UIImageView(frame: CGRect(x:0.0 + screenWidth, y:0.0, width:screenWidth, height:picViewHeight!))
         headerImageView2.image = headerImage2
         headerImageView2.contentMode = .scaleToFill
         
-        let headerImage3 = UIImage(named: "3")
+        let headerImage3 = UIImage(named: "宝贝详情3")
         let headerImageView3 = UIImageView(frame: CGRect(x:0.0 + screenWidth * 2, y:0.0, width:screenWidth, height:picViewHeight!))
         headerImageView3.image = headerImage3
         headerImageView3.contentMode = .scaleToFill

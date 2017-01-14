@@ -57,6 +57,9 @@
 		7346CC0B1E2A764100B1C84A /* 夏玉坠3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBFB1E2A764100B1C84A /* 夏玉坠3.png */; };
 		7346CC0C1E2A764100B1C84A /* 夏玉坠4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBFC1E2A764100B1C84A /* 夏玉坠4.png */; };
 		7346CC0D1E2A764100B1C84A /* 夏玉坠5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CBFD1E2A764100B1C84A /* 夏玉坠5.png */; };
+		7346CC111E2A7A7900B1C84A /* 宝贝详情3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CC0E1E2A7A7900B1C84A /* 宝贝详情3.png */; };
+		7346CC121E2A7A7900B1C84A /* 宝贝详情2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CC0F1E2A7A7900B1C84A /* 宝贝详情2.png */; };
+		7346CC131E2A7A7900B1C84A /* 宝贝详情1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7346CC101E2A7A7900B1C84A /* 宝贝详情1.png */; };
 		73B968D71E160E5C000B829C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B968D61E160E5C000B829C /* AppDelegate.swift */; };
 		73B968DE1E160E5C000B829C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73B968DD1E160E5C000B829C /* Assets.xcassets */; };
 		73B968EC1E160E5C000B829C /* KingsDemoNoStoryBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B968EB1E160E5C000B829C /* KingsDemoNoStoryBoardTests.swift */; };
@@ -137,6 +140,9 @@
 		7346CBFB1E2A764100B1C84A /* 夏玉坠3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "夏玉坠3.png"; sourceTree = "<group>"; };
 		7346CBFC1E2A764100B1C84A /* 夏玉坠4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "夏玉坠4.png"; sourceTree = "<group>"; };
 		7346CBFD1E2A764100B1C84A /* 夏玉坠5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "夏玉坠5.png"; sourceTree = "<group>"; };
+		7346CC0E1E2A7A7900B1C84A /* 宝贝详情3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "宝贝详情3.png"; sourceTree = "<group>"; };
+		7346CC0F1E2A7A7900B1C84A /* 宝贝详情2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "宝贝详情2.png"; sourceTree = "<group>"; };
+		7346CC101E2A7A7900B1C84A /* 宝贝详情1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "宝贝详情1.png"; sourceTree = "<group>"; };
 		73B968D31E160E5C000B829C /* KingsDemoNoStoryBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KingsDemoNoStoryBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B968D61E160E5C000B829C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73B968DD1E160E5C000B829C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -183,6 +189,9 @@
 		45A9DF721E23CD3B0043A95F /* img */ = {
 			isa = PBXGroup;
 			children = (
+				7346CC0E1E2A7A7900B1C84A /* 宝贝详情3.png */,
+				7346CC0F1E2A7A7900B1C84A /* 宝贝详情2.png */,
+				7346CC101E2A7A7900B1C84A /* 宝贝详情1.png */,
 				7346CBEE1E2A764100B1C84A /* 佛意菩提1.png */,
 				7346CBEF1E2A764100B1C84A /* 佛意菩提2.png */,
 				7346CBF01E2A764100B1C84A /* 和田玉手镯1.png */,
@@ -429,6 +438,7 @@
 				7346CBCA1E2A588600B1C84A /* 玉器工艺品3.png in Resources */,
 				7346CBBE1E2A588600B1C84A /* 印3.png in Resources */,
 				7346CBBB1E2A588600B1C84A /* 蜜蜡3.png in Resources */,
+				7346CC131E2A7A7900B1C84A /* 宝贝详情1.png in Resources */,
 				7346CBBA1E2A588600B1C84A /* 蜜蜡2.png in Resources */,
 				45025C601E2A6009004EDB35 /* cart.png in Resources */,
 				7346CBC31E2A588600B1C84A /* 玉佩1.png in Resources */,
@@ -459,8 +469,10 @@
 				7346CBBF1E2A588600B1C84A /* 印4.png in Resources */,
 				7346CBFF1E2A764100B1C84A /* 佛意菩提2.png in Resources */,
 				452E56051E260CE300B632AB /* user.png in Resources */,
+				7346CC121E2A7A7900B1C84A /* 宝贝详情2.png in Resources */,
 				7346CC031E2A764100B1C84A /* 琉璃手串2.png in Resources */,
 				7346CC061E2A764100B1C84A /* 绿松石手串3.png in Resources */,
+				7346CC111E2A7A7900B1C84A /* 宝贝详情3.png in Resources */,
 				7346CBC11E2A588600B1C84A /* 玉雕2.png in Resources */,
 				45025C631E2A6E6F004EDB35 /* HomePic.png in Resources */,
 				452E56071E260D0000B632AB /* defaultphoto.png in Resources */,

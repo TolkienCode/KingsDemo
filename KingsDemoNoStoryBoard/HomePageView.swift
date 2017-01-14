@@ -42,6 +42,8 @@ class SectionView: UIView {
     override func draw(_ rect: CGRect) {
         let recLabel1 = UILabel(frame: CGRect(x:0.0, y:0.0, width:screenWidth, height:recLabelHeight))
         recLabel1.text = self.title!
+        recLabel1.textColor = UIColor.white
+        recLabel1.font = UIFont.boldSystemFont(ofSize: 13);
         recLabel1.textAlignment = NSTextAlignment.center
         recLabel1.backgroundColor = UIColor.lightGray
         self.addSubview(recLabel1)

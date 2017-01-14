@@ -76,8 +76,8 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var itemsToLoadForSpring: [String] = ["绿松石手串1", "绿松石手串2", "绿松石手串3", "绿松石手串4", "绿松石手串5"];
     var itemsToLoadForSummer: [String] = ["夏玉坠1", "夏玉坠2", "夏玉坠3", "夏玉坠4", "夏玉坠5"];
-    var itemsToLoadForAutumn: [String] = ["1", "2", "3", "4", "5"];
-    var itemsToLoadForWinter: [String] = ["5", "4", "3", "2", "1"];
+    var itemsToLoadForAutumn: [String] = ["绿松石手串1", "绿松石手串2", "绿松石手串3", "绿松石手串4", "绿松石手串5"];
+    var itemsToLoadForWinter: [String] = ["夏玉坠1", "夏玉坠2", "夏玉坠3", "夏玉坠4", "夏玉坠5"];
     var pageTitles: [String] = ["春之绿", "夏之魅", "秋之韵", "冬之洁"];
     
     var rightButton: UIBarButtonItem?
@@ -129,7 +129,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         myTableView.frame = CGRect(x: CGFloat(0.0), y: CGFloat(0.0), width: screenWidth, height: screenHeight);
         myTableView.dataSource = self;
         myTableView.delegate = self;
-        myTableView.rowHeight = screenHeight / 3.5;
+        myTableView.rowHeight = screenHeight / 3;
         // myTableView.contentSize = CGSize(width: screenWidth, height: screenHeight)
         
         myTableView.register(SpringCell.self, forCellReuseIdentifier: "SpringCell")
@@ -139,7 +139,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         myTableView2.dataSource = self
         myTableView2.delegate = self
-        myTableView2.rowHeight = screenHeight / 3.5
+        myTableView2.rowHeight = screenHeight / 3
         
         myTableView2.register(SummerCell.self, forCellReuseIdentifier: "SummerCell")
         
@@ -147,7 +147,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         myTableView3.frame = CGRect(x: screenWidth * 2, y: 0, width: screenWidth, height: screenHeight)
         myTableView3.dataSource = self
         myTableView3.delegate = self
-        myTableView3.rowHeight = screenHeight / 3.5
+        myTableView3.rowHeight = screenHeight / 3
         
         myTableView3.register(AutumnCell.self, forCellReuseIdentifier: "AutumnCell")
         
@@ -155,7 +155,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         myTableView4.frame = CGRect(x: screenWidth * 3, y: 0, width: screenWidth, height: screenHeight)
         myTableView4.dataSource = self
         myTableView4.delegate = self
-        myTableView4.rowHeight = screenHeight / 3.5
+        myTableView4.rowHeight = screenHeight / 3
         
         myTableView4.register(WinterCell.self, forCellReuseIdentifier: "WinterCell")
         
