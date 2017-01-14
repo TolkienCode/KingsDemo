@@ -82,17 +82,17 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         navigationBar!.setItems([navItem], animated: false)
     }
     
-    private func setupPageView() {
+    private func setupPageView()
+    {
         shopDetailView = UIScrollView(frame: CGRect(x:0.0, y:0.0 + navigationBarHeight, width: screenWidth, height: detailViewHeight!))
         shopDetailView?.isPagingEnabled = true
         shopDetailView?.delegate = self
-        shopDetailView?.showsVerticalScrollIndicator = true
-        shopDetailView?.contentSize = CGSize(width: screenWidth, height: pageHeight)
-        
-        //let imageHeight = (screenHeight - navigationBarHeight) / 2
+        shopDetailView?.showsVerticalScrollIndicator = true;
+        shopDetailView?.contentSize = CGSize(width: screenWidth, height: picViewHeight!);
         
         shopDetailHeaderView = UIScrollView(frame: CGRect(x:0.0, y:0.0, width: screenWidth, height: picViewHeight!))
         shopDetailHeaderView?.showsVerticalScrollIndicator = false
+        shopDetailHeaderView?.delegate = self;
         
         let headerImage1 = UIImage(named: "1")
         let headerImageView1 = UIImageView(frame: CGRect(x:0.0, y:0.0, width: screenWidth, height: picViewHeight!))
