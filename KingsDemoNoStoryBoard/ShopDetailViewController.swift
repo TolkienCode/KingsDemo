@@ -213,12 +213,12 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         //addButton?.titleLabel?.font = UIFont.systemFont(ofSize: 11);
         addButton?.backgroundColor = UIColor.orange;
         //addButton?.addTarget(target:self, action: <#T##Selector#>, for: <#T##UIControlEvents#>);
-        addButton?.addTarget(self, action: Selector("goCart:"), for: .touchUpInside);
+        addButton?.addTarget(self, action: #selector(goCart), for: .touchUpInside);
         bottomView?.addSubview(addButton!);
         
     }
     
-    private func goCart()
+    func goCart()
     {
         self.present(cargoViewController(), animated: true, completion: nil);
     }

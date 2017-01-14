@@ -14,7 +14,7 @@ class cargoViewController: UIViewController
     let navigationBarHeight: CGFloat = 64.0
     var navigationBar: UINavigationBar?
     
-    var bottomHeight:String?;
+    var bottomHeight:CGFloat?;
     
     
     override func viewDidLoad()
@@ -51,7 +51,12 @@ class cargoViewController: UIViewController
         navigationBar!.setItems([navItem], animated: false)
     }
     
-    privat func setBottom()
+    private func setContent()
+    {
+        
+    }
+    
+    private func setBottom()
     {
         
     }
