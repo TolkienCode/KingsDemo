@@ -28,6 +28,8 @@ class cargoViewController: UIViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setNavigation();
+        setContent();
+        setBottom();
         
         self.view.addSubview(self.navigationBar!);
         self.view.addSubview(self.contentView!);
@@ -64,8 +66,8 @@ class cargoViewController: UIViewController
         self.contentHeight = (screenHeight - self.navigationBarHeight)/9*8;
         
         self.contentView = UIView();
-        self.contentView?.frame = CGRect(x:0.0, y: navigationBarHeight, width: screenWidth, height: self.contentHeight!);
-        self.contentView?.backgroundColor = UIColor.white;
+        self.contentView!.frame = CGRect(x:0.0, y: navigationBarHeight, width: screenWidth, height: self.contentHeight!);
+        self.contentView!.backgroundColor = UIColor.white;
     }
     
     private func setBottom()
@@ -73,8 +75,8 @@ class cargoViewController: UIViewController
         self.bottomHeight = (screenHeight - self.navigationBarHeight)/9;
         
         self.bottomView = UIView();
-        self.bottomView?.frame = CGRect(x:0.0, y: navigationBarHeight + self.contentHeight!, width: screenWidth, height: self.bottomHeight!);
-        self.bottomView?.backgroundColor = UIColor.lightGray;
+        self.bottomView!.frame = CGRect(x:0.0, y: navigationBarHeight + self.contentHeight!, width: screenWidth, height: self.bottomHeight!);
+        self.bottomView!.backgroundColor = UIColor.lightGray;
         
         
         
