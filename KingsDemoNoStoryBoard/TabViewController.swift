@@ -8,8 +8,14 @@
 
 import UIKit
 
-class TabViewController: UITabBarController, UITabBarControllerDelegate {
-
+class TabViewController: UITabBarController, UITabBarControllerDelegate
+{
+    var homeIcon:UIImage?;
+    var shopIcon:UIImage?;
+    var carIcon:UIImage?;
+    var userIcon:UIImage?;
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,8 +23,13 @@ class TabViewController: UITabBarController, UITabBarControllerDelegate {
         self.delegate = self
     }
 
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool)
+    {
         super.viewWillAppear(animated)
+    
+        
+        self.homeIcon=UIImage();
+        //UIImage
         
         // Create Tab one: Home Page
         let tabOne = HomePageViewController()
@@ -38,7 +49,7 @@ class TabViewController: UITabBarController, UITabBarControllerDelegate {
         let tabThree = CarViewController()
         let tabThreeBarItem = UITabBarItem(title: "豪车", image: UIImage(named: "defaultImage3.png"), selectedImage: UIImage(named: "selectedImage3.png"))
         
-        tabThree.tabBarItem = tabThreeBarItem
+        tabThree.tabBarItem = tabThreeBarItem;
         
         // Create Tab four: My Account
         let tabFour = MyAccountViewController()
