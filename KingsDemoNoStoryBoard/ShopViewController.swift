@@ -39,6 +39,32 @@ class SummerCell: UITableViewCell
     }
 }
 
+class AutumnCell: UITableViewCell
+{
+    override init(style: UITableViewCellStyle, reuseIdentifier: String!)
+    {
+        super.init(style: UITableViewCellStyle.value1, reuseIdentifier: reuseIdentifier)
+    }
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+class WinterCell: UITableViewCell
+{
+    override init(style: UITableViewCellStyle, reuseIdentifier: String!)
+    {
+        super.init(style: UITableViewCellStyle.value1, reuseIdentifier: reuseIdentifier)
+    }
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate
 {
     var shopView: UIScrollView?
@@ -48,7 +74,10 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var myTableView3: UITableView = UITableView()
     var myTableView4: UITableView = UITableView()
     
-    var itemsToLoad: [String] = ["One", "Two", "Three", "Four", "Five"];
+    var itemsToLoadForSpring: [String] = ["绿松石手串1", "绿松石手串2", "绿松石手串3", "绿松石手串4", "绿松石手串5"];
+    var itemsToLoadForSummer: [String] = ["夏玉坠1", "夏玉坠2", "夏玉坠3", "夏玉坠4", "夏玉坠5"];
+    var itemsToLoadForAutumn: [String] = ["1", "2", "3", "4", "5"];
+    var itemsToLoadForWinter: [String] = ["5", "4", "3", "2", "1"];
     var pageTitles: [String] = ["春之绿", "夏之魅", "秋之韵", "冬之洁"];
     
     var rightButton: UIBarButtonItem?
@@ -100,7 +129,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         myTableView.frame = CGRect(x: CGFloat(0.0), y: CGFloat(0.0), width: screenWidth, height: screenHeight);
         myTableView.dataSource = self;
         myTableView.delegate = self;
-        myTableView.rowHeight = screenHeight / 4;
+        myTableView.rowHeight = screenHeight / 3.5;
         // myTableView.contentSize = CGSize(width: screenWidth, height: screenHeight)
         
         myTableView.register(SpringCell.self, forCellReuseIdentifier: "SpringCell")
@@ -110,7 +139,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         myTableView2.dataSource = self
         myTableView2.delegate = self
-        myTableView2.rowHeight = screenHeight / 4
+        myTableView2.rowHeight = screenHeight / 3.5
         
         myTableView2.register(SummerCell.self, forCellReuseIdentifier: "SummerCell")
         
@@ -118,17 +147,17 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         myTableView3.frame = CGRect(x: screenWidth * 2, y: 0, width: screenWidth, height: screenHeight)
         myTableView3.dataSource = self
         myTableView3.delegate = self
-        myTableView3.rowHeight = screenHeight / 4
+        myTableView3.rowHeight = screenHeight / 3.5
         
-        myTableView3.register(SpringCell.self, forCellReuseIdentifier: "SpringCell")
+        myTableView3.register(AutumnCell.self, forCellReuseIdentifier: "AutumnCell")
         
         // mytableview 4
         myTableView4.frame = CGRect(x: screenWidth * 3, y: 0, width: screenWidth, height: screenHeight)
         myTableView4.dataSource = self
         myTableView4.delegate = self
-        myTableView4.rowHeight = screenHeight / 4
+        myTableView4.rowHeight = screenHeight / 3.5
         
-        myTableView4.register(SpringCell.self, forCellReuseIdentifier: "SpringCell")
+        myTableView4.register(WinterCell.self, forCellReuseIdentifier: "WinterCell")
         
         
         // -- setup shopview --
@@ -165,7 +194,19 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return itemsToLoad.count
+        if tableView == myTableView
+        {
+            return itemsToLoadForSpring.count
+        } else if tableView == myTableView2
+        {
+            return itemsToLoadForSummer.count
+        } else if tableView == myTableView3
+        {
+            return itemsToLoadForAutumn.count
+        } else
+        {
+            return itemsToLoadForWinter.count
+        }
     }
     
     
@@ -173,18 +214,24 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell: UITableViewCell?
+        let imageName: String?
         
         if tableView == myTableView
         {
             cell = tableView.dequeueReusableCell(withIdentifier: "SpringCell", for: indexPath as IndexPath);
-            
+            imageName = itemsToLoadForSpring[indexPath.row]
         } else if tableView == myTableView2
         {
             cell = tableView.dequeueReusableCell(withIdentifier: "SummerCell", for: indexPath as IndexPath);
-            
+            imageName = itemsToLoadForSummer[indexPath.row]
+        } else if tableView == myTableView3
+        {
+            cell = tableView.dequeueReusableCell(withIdentifier: "AutumnCell", for: indexPath as IndexPath);
+            imageName = itemsToLoadForAutumn[indexPath.row]
         } else
         {
-            cell = tableView.dequeueReusableCell(withIdentifier: "SpringCell", for: indexPath as IndexPath);
+            cell = tableView.dequeueReusableCell(withIdentifier: "WinterCell", for: indexPath as IndexPath);
+            imageName = itemsToLoadForWinter[indexPath.row]
         }
         
         cell?.selectionStyle = .none
@@ -195,9 +242,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         //cell.detailTextLabel?.text = "sample text"
         
-        let imageName = indexPath.row % 5 + 1
-        
-        let cellBkImage = UIImage(named: String(imageName))
+        let cellBkImage = UIImage(named: imageName!)
         let cellBkImageView = UIImageView(frame: cell!.frame)
         cellBkImageView.image = cellBkImage
         cellBkImageView.contentMode = .scaleToFill
@@ -209,7 +254,6 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        print("User selected table row \(indexPath.row) and item \(itemsToLoad[indexPath.row])");
         present(ShopDetailViewController(), animated: true, completion: nil);
     }
     

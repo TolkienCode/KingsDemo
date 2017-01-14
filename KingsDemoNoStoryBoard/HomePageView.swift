@@ -197,17 +197,17 @@ class HomePageView: UIScrollView, UIGestureRecognizerDelegate, UIScrollViewDeleg
         let headerRect = CGRect(x:0.0, y:headerStartHeight, width:screenWidth, height:sectionHeight)
         headerView = UIScrollView(frame: headerRect)
         
-        let headerImage1 = UIImage(named: "1")
+        let headerImage1 = UIImage(named: "和田玉手镯2")
         let headerImageView1 = UIImageView(frame: headerRect)
         headerImageView1.image = headerImage1
         headerImageView1.contentMode = .scaleToFill
         
-        let headerImage2 = UIImage(named: "2")
+        let headerImage2 = UIImage(named: "琉璃手串1")
         let headerImageView2 = UIImageView(frame: CGRect(x:0.0 + screenWidth, y:headerStartHeight, width:screenWidth, height:sectionHeight))
         headerImageView2.image = headerImage2
         headerImageView2.contentMode = .scaleToFill
         
-        let headerImage3 = UIImage(named: "3")
+        let headerImage3 = UIImage(named: "佛意菩提2")
         let headerImageView3 = UIImageView(frame: CGRect(x:0.0 + screenWidth * 2, y:headerStartHeight, width:screenWidth, height:sectionHeight))
         headerImageView3.image = headerImage3
         headerImageView3.contentMode = .scaleToFill
