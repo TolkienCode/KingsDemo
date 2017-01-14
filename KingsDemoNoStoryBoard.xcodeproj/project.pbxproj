@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		45025C601E2A6009004EDB35 /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 45025C5E1E2A6009004EDB35 /* cart.png */; };
 		45025C611E2A6009004EDB35 /* totalprice.png in Resources */ = {isa = PBXBuildFile; fileRef = 45025C5F1E2A6009004EDB35 /* totalprice.png */; };
+		45025C631E2A6E6F004EDB35 /* HomePic.png in Resources */ = {isa = PBXBuildFile; fileRef = 45025C621E2A6E6F004EDB35 /* HomePic.png */; };
 		452E56051E260CE300B632AB /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 452E56041E260CE300B632AB /* user.png */; };
 		452E56071E260D0000B632AB /* defaultphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 452E56061E260D0000B632AB /* defaultphoto.png */; };
 		453CE0C81E29388F00B2CA0B /* cargoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CE0C71E29388F00B2CA0B /* cargoViewController.swift */; };
@@ -72,6 +73,7 @@
 /* Begin PBXFileReference section */
 		45025C5E1E2A6009004EDB35 /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
 		45025C5F1E2A6009004EDB35 /* totalprice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = totalprice.png; sourceTree = "<group>"; };
+		45025C621E2A6E6F004EDB35 /* HomePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomePic.png; sourceTree = "<group>"; };
 		452E56041E260CE300B632AB /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		452E56061E260D0000B632AB /* defaultphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultphoto.png; sourceTree = "<group>"; };
 		453CE0C71E29388F00B2CA0B /* cargoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cargoViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		45A9DF721E23CD3B0043A95F /* img */ = {
 			isa = PBXGroup;
 			children = (
+				45025C621E2A6E6F004EDB35 /* HomePic.png */,
 				45025C5E1E2A6009004EDB35 /* cart.png */,
 				45025C5F1E2A6009004EDB35 /* totalprice.png */,
 				452E56061E260D0000B632AB /* defaultphoto.png */,
@@ -397,6 +400,7 @@
 				7346CBBF1E2A588600B1C84A /* 印4.png in Resources */,
 				452E56051E260CE300B632AB /* user.png in Resources */,
 				7346CBC11E2A588600B1C84A /* 玉雕2.png in Resources */,
+				45025C631E2A6E6F004EDB35 /* HomePic.png in Resources */,
 				452E56071E260D0000B632AB /* defaultphoto.png in Resources */,
 				45F091F81E24E89F006A8414 /* Car2.png in Resources */,
 				45F091F71E24E89F006A8414 /* Car1.png in Resources */,

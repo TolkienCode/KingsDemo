@@ -120,12 +120,18 @@ class SectionView: UIView {
 
 // UIScrollViewDelegate: 为了显示滑动图片＋圆点控制
 // UIGestureRecognizerDelegate: 为了响应左右滑动
-class HomePageView: UIScrollView, UIGestureRecognizerDelegate, UIScrollViewDelegate {
+class HomePageView: UIScrollView, UIGestureRecognizerDelegate, UIScrollViewDelegate
+{
     var recFirstLineImage: [UIImage]?
     var recSecondLineImage: [UIImage]?
     var recFirstLineItemNumber: [Int]?, recSecondLineItemNumber: [Int]?
     var pageControl: UIPageControl?
     var headerView: UIScrollView?
+    
+    
+    var homeImgHeight:CGFloat?;
+    
+    var homeImgView: UIImageView?;
     
     init(frame: CGRect, recFirstLineImage: [UIImage], recSecondLineImage: [UIImage], recFirstLineItemNumber: [Int], recSecondLineItemNumber: [Int]) {
         super.init(frame: frame)
@@ -239,18 +245,30 @@ class HomePageView: UIScrollView, UIGestureRecognizerDelegate, UIScrollViewDeleg
         self.addSubview(headerView!)
         self.addSubview(pageControl!)
         
+        
+        self.homeImgHeight = 130;
+        
+        homeImgView = UIImageView();
+        let homeImgY:CGFloat = sectionHeight + headerStartHeight;
+        homeImgView!.frame = CGRect(x:0.0, y: homeImgY, width: screenWidth, height: self.homeImgHeight!);
+        self.homeImgView?.image = UIImage(named:"HomePic");
+        self.addSubview(homeImgView!);
+        
+        
+        
+        
         // 新品推荐 - rec
         let recommendationStartHeight = sectionHeight + headerStartHeight
         let iconImageWidth: CGFloat = (screenWidth - imageMargin * 4) / 3
         let recommendationSectionHeight:CGFloat = recLabelHeight + sectionMargin + imageMargin + sectionMargin + iconImageWidth + iconImageWidth
         
-        let secView = SectionView(frame: CGRect(x:0.0, y:recommendationStartHeight, width: screenWidth, height:recommendationSectionHeight), title: "---  新品推荐  ---", firstLineImage: self.recFirstLineImage!, secondLineImage: self.recSecondLineImage!, recFirstLineItemNumber: self.recFirstLineItemNumber!, recSecondLineItemNumber: self.recSecondLineItemNumber! )
+        let secView = SectionView(frame: CGRect(x:0.0, y:recommendationStartHeight + self.homeImgHeight!, width: screenWidth, height:recommendationSectionHeight), title: "---  新品推荐  ---", firstLineImage: self.recFirstLineImage!, secondLineImage: self.recSecondLineImage!, recFirstLineItemNumber: self.recFirstLineItemNumber!, recSecondLineItemNumber: self.recSecondLineItemNumber! )
         //let recView = UIView(frame: CGRect(x:0.0, y:recommendationStartHeight, width: screenWidth, height:recommendationSectionHeight))
         secView.backgroundColor = UIColor.white
         self.addSubview(secView)
         
         // 限时秒杀
-        let secView2 = SectionView(frame: CGRect(x:0.0, y:recommendationStartHeight + recommendationSectionHeight, width: screenWidth, height:recommendationSectionHeight), title: "---  限时秒杀  ---", firstLineImage: self.recFirstLineImage!, secondLineImage: self.recSecondLineImage!, recFirstLineItemNumber: self.recFirstLineItemNumber!, recSecondLineItemNumber: self.recSecondLineItemNumber!)
+        let secView2 = SectionView(frame: CGRect(x:0.0, y:recommendationStartHeight + recommendationSectionHeight + self.homeImgHeight!, width: screenWidth, height:recommendationSectionHeight), title: "---  限时秒杀  ---", firstLineImage: self.recFirstLineImage!, secondLineImage: self.recSecondLineImage!, recFirstLineItemNumber: self.recFirstLineItemNumber!, recSecondLineItemNumber: self.recSecondLineItemNumber!)
         secView2.backgroundColor = UIColor.white
         self.addSubview(secView2)
     }
