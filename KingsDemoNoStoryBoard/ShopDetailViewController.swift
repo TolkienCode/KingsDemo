@@ -200,16 +200,19 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         
         attButton = UIButton(frame: CGRect(x: 0.0, y: 0.0 + 6 , width: screenWidth/3, height: bottomViewHeight! - 6 ))
         attButton?.setTitle("关注商品", for: .normal)
+        attButton?.titleLabel?.font = UIFont.systemFont(ofSize: 12);
         attButton?.backgroundColor = UIColor.blue;
         bottomView?.addSubview(attButton!);
         
         buyButton = UIButton(frame: CGRect(x: screenWidth/3*1, y: 0.0 + 6, width: screenWidth/3, height: bottomViewHeight! - 6 ))
         buyButton?.setTitle("收藏店铺", for: .normal)
+        buyButton?.titleLabel?.font = UIFont.systemFont(ofSize: 12);
         buyButton?.backgroundColor = UIColor.red;
         bottomView?.addSubview(buyButton!);
  
         addButton = UIButton(frame: CGRect(x: screenWidth/3*2, y: 0.0 + 6, width: screenWidth/3, height: bottomViewHeight! - 6 ))
         addButton?.setTitle("加入购物车", for: .normal)
+        addButton?.titleLabel?.font = UIFont.systemFont(ofSize: 12);
         //addButton?.titleLabel?.font = UIFont.systemFont(ofSize: 11);
         addButton?.backgroundColor = UIColor.orange;
         //addButton?.addTarget(target:self, action: <#T##Selector#>, for: <#T##UIControlEvents#>);
