@@ -148,8 +148,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.view.addSubview(shopNavigation!);
         self.view.addSubview(shopView!);
         
-        //self.view.addSubview(myTableView);
-        //self.view.
+       
     }
     
     override func didReceiveMemoryWarning()
@@ -175,13 +174,16 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     {
         let cell: UITableViewCell?
         
-        if tableView == myTableView {
+        if tableView == myTableView
+        {
             cell = tableView.dequeueReusableCell(withIdentifier: "SpringCell", for: indexPath as IndexPath);
             
-        } else if tableView == myTableView2 {
+        } else if tableView == myTableView2
+        {
             cell = tableView.dequeueReusableCell(withIdentifier: "SummerCell", for: indexPath as IndexPath);
             
-        } else {
+        } else
+        {
             cell = tableView.dequeueReusableCell(withIdentifier: "SpringCell", for: indexPath as IndexPath);
         }
         
@@ -212,14 +214,6 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
     
 }
