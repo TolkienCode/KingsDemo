@@ -130,7 +130,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         myTableView.frame = CGRect(x: CGFloat(0.0), y: CGFloat(0.0), width: screenWidth, height: screenHeight);
         myTableView.dataSource = self;
         myTableView.delegate = self;
-        myTableView.rowHeight = screenHeight / 3;
+        myTableView.rowHeight = screenHeight / 2.4;
         // myTableView.contentSize = CGSize(width: screenWidth, height: screenHeight)
         
         myTableView.register(SpringCell.self, forCellReuseIdentifier: "SpringCell")
@@ -140,7 +140,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         myTableView2.dataSource = self
         myTableView2.delegate = self
-        myTableView2.rowHeight = screenHeight / 3
+        myTableView2.rowHeight = screenHeight / 2.4
         
         myTableView2.register(SummerCell.self, forCellReuseIdentifier: "SummerCell")
         
@@ -148,7 +148,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         myTableView3.frame = CGRect(x: screenWidth * 2, y: 0, width: screenWidth, height: screenHeight)
         myTableView3.dataSource = self
         myTableView3.delegate = self
-        myTableView3.rowHeight = screenHeight / 3
+        myTableView3.rowHeight = screenHeight / 2.4
         
         myTableView3.register(AutumnCell.self, forCellReuseIdentifier: "AutumnCell")
         
@@ -156,7 +156,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         myTableView4.frame = CGRect(x: screenWidth * 3, y: 0, width: screenWidth, height: screenHeight)
         myTableView4.dataSource = self
         myTableView4.delegate = self
-        myTableView4.rowHeight = screenHeight / 3
+        myTableView4.rowHeight = screenHeight / 2.4
         
         myTableView4.register(WinterCell.self, forCellReuseIdentifier: "WinterCell")
         
