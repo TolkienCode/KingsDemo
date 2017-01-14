@@ -157,6 +157,10 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         titleLabel?.frame = CGRect(x:0.0, y:0.0, width: screenWidth, height: detailViewHeight! / 9);
         //titleLabel?.backgroundColor = UIColor.lightGray;
         titleLabel?.text = " 演示商品（商品编号: Y10023033)";
+        titleLabel?.adjustsFontSizeToFitWidth = true;
+        titleLabel?.minimumScaleFactor = 0.6;
+        titleLabel?.textAlignment=NSTextAlignment.left;
+        titleLabel!.font = UIFont.boldSystemFont(ofSize: 15);
         detailView?.addSubview(titleLabel!);
         
         priceLabel = UILabel();
@@ -164,7 +168,8 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         //titleLabel?.font = UIFont.smallSystemFontSize;
         priceLabel?.textColor = UIColor.red;
         //titleLabel?.font=
-        priceLabel?.text = " 价格：¥: 666";
+        priceLabel?.text = " 价格 - ¥666";
+        priceLabel!.font = UIFont.systemFont(ofSize: 12);
         detailView?.addSubview(priceLabel!);
         
         
@@ -174,6 +179,7 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         commitLabel?.textColor = UIColor.black;
         //titleLabel?.font=
         commitLabel?.text = " 累计评价 - 暂无";
+        commitLabel!.font = UIFont.italicSystemFont(ofSize: 11);
         detailView?.addSubview(commitLabel!);
         
         descritpion=UITextView();
@@ -182,7 +188,7 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         descritpion!.layer.borderColor = UIColor.gray.cgColor //边框颜色
         descritpion!.isEditable = false;
         descritpion!.isSelectable = true;
-        //descritpion!.font = UIFont.systemFontSize;
+        descritpion!.font = UIFont.systemFont(ofSize: 10);
         descritpion?.text = "商品介绍：\n" + "千年血玉为什么会跟血扯上关系？其实主要的依据就是它像血一样红的外观和传说。现在我们就一探究竟，看看千年血玉到底是什么样。\n" + "传说中的千年血玉并不是天然形成的，它那沁入内里的红色，其实是透了血的结果。这到底是怎么一回事？要追溯于人的尸体。当人下葬的时候，作为衔玉的玉器，会被强行塞到人口，随着最后一口气咽下进入咽喉处。咽喉处血管密集，玉器与血经历岁月的融合，便会形成血玉。传说就是这个样子，但事实真的如此吗？其实这是一种不科学的说法！血在地下是会碳化的，更不可能会像无机物那样沁入玉器的里。对于千年血玉的形成，其实是由铁元素造成的。出土血玉显现的红色是因为地下土壤中含有的铁元素或者是陪葬的铁制品被氧化分解，最终沁入玉体里。所以千年血玉才看起来那么红！"
         detailView?.addSubview(descritpion!);
         
