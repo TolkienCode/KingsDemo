@@ -38,8 +38,12 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate
         homeNavigation = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: navigationBarHeight));
         homeNavigation!.backgroundColor=UIColor.white;
         
-        let rightButton = UIBarButtonItem(title: "购物车", style: .done, target: nil, action: nil)
-        let leftButton = UIBarButtonItem(title: "搜索", style: .done, target: nil, action: nil)
+        let leftButton = UIBarButtonItem(image: UIImage(named: "icon_patrol_query"), style: .done, target: nil, action: nil)
+        let rightButton = UIBarButtonItem(image: UIImage(named: "icon_cart2"), style: .done, target: nil, action: #selector(showCart))
+        
+        leftButton.tintColor = UIColor.red
+        rightButton.tintColor = UIColor.red
+        
         /*
         homeNavigation!.topItem?.title = "首页";
         homeNavigation!.topItem?.rightBarButtonItem = rightButton;
@@ -89,6 +93,9 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate
         // Dispose of any resources that can be recreated.
     }
     
+    func showCart() {
+        present(cargoViewController(), animated: true, completion: nil)
+    }
 
 }
 

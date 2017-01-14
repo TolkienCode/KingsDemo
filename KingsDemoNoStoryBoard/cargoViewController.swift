@@ -52,7 +52,9 @@ class cargoViewController: UIViewController
         navigationBar!.backgroundColor=UIColor.white;
         
         //let rightButton = UIBarButtonItem(title: "购物车", style: .done, target: nil, action: nil)
-        let leftButton = UIBarButtonItem(title: "返回", style: .done, target: nil, action: #selector(cargoViewController.goBack))
+        let leftButton = UIBarButtonItem(image: UIImage(named: "icon_back"), style: .done, target: nil, action: #selector(cargoViewController.goBack))
+        leftButton.tintColor = UIColor.red
+        
         /*
          homeNavigation!.topItem?.title = "首页";
          homeNavigation!.topItem?.rightBarButtonItem = rightButton;
