@@ -65,7 +65,7 @@ class cargoViewController: UIViewController
     
     private func setContent()
     {
-        self.contentHeight = (screenHeight - self.navigationBarHeight)/10*9;
+        self.contentHeight = (screenHeight - self.navigationBarHeight)/11*10;
         
         self.contentView = UIView();
         self.contentView!.frame = CGRect(x:0.0, y: navigationBarHeight, width: screenWidth, height: self.contentHeight!);
@@ -74,20 +74,20 @@ class cargoViewController: UIViewController
     
     private func setBottom()
     {
-        self.bottomHeight = (screenHeight - self.navigationBarHeight)/10;
+        self.bottomHeight = (screenHeight - self.navigationBarHeight)/11;
         
         self.bottomView = UIView();
         self.bottomView!.frame = CGRect(x:0.0, y: navigationBarHeight + self.contentHeight!, width: screenWidth, height: self.bottomHeight!);
         self.bottomView!.backgroundColor = UIColor.lightGray;
         
         self.thinkBtn = UIButton(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth/2, height: bottomHeight! ))
-        orderBtn?.setTitle("再考虑下", for: .normal)
-        orderBtn?.backgroundColor = UIColor.blue;
+        thinkBtn?.setTitle("再考虑下", for: .normal)
+        thinkBtn?.backgroundColor = UIColor.orange;
         bottomView?.addSubview(thinkBtn!);
         
         self.orderBtn = UIButton(frame: CGRect(x: screenWidth/2, y: 0.0, width: screenWidth/2, height: bottomHeight! ))
         orderBtn?.setTitle("确认下单", for: .normal)
-        orderBtn?.backgroundColor = UIColor.blue;
+        orderBtn?.backgroundColor = UIColor.red;
         bottomView?.addSubview(orderBtn!);
         
         
