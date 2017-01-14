@@ -56,7 +56,7 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         myTableView.frame = CGRect(x: CGFloat(0.0), y: navigationBarHeight, width: screenWidth, height: screenHeight);
         myTableView.dataSource = self;
         myTableView.delegate = self;
-        myTableView.rowHeight = screenHeight/3 - 30;
+        myTableView.rowHeight = screenHeight/2.6;
         // myTableView.contentSize = CGSize(width: screenWidth, height: screenHeight)
         
         myTableView.register(CarViewCell.self, forCellReuseIdentifier: "CarViewCell")

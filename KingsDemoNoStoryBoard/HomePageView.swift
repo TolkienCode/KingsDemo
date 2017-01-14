@@ -248,7 +248,9 @@ class HomePageView: UIScrollView, UIGestureRecognizerDelegate, UIScrollViewDeleg
         self.addSubview(pageControl!)
         
         
-        self.homeImgHeight = 130;
+        self.homeImgHeight = 136;
+        
+        
         
         homeImgView = UIImageView();
         let homeImgY:CGFloat = sectionHeight + headerStartHeight;

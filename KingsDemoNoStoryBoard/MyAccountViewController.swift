@@ -78,8 +78,8 @@ class MyAccountViewController: UIViewController, UITableViewDataSource, UITableV
         
         
         self.UserInfo = ["账户详情", "收藏商品"];
-        self.OrderInfo = ["订单管理", "物流查询", "退款查询"];
-        self.SettingInfo = ["系统设置", "用户反馈", "系统消息"];
+        self.OrderInfo = ["订单管理 (1)", "物流查询 (2)", "退款查询"];
+        self.SettingInfo = ["系统设置", "用户反馈", "系统消息 (3)"];
         
         
         accountInfo?.register(MyAccountCell.self, forCellReuseIdentifier: "MyAccountCell")

@@ -10,10 +10,10 @@ import UIKit
 
 class TabViewController: UITabBarController, UITabBarControllerDelegate
 {
-    var homeIcon:UIImage?;
-    var shopIcon:UIImage?;
-    var carIcon:UIImage?;
-    var userIcon:UIImage?;
+    //var homeIcon:UIImage?;
+    //var shopIcon:UIImage?;
+    //var carIcon:UIImage?;
+    //var userIcon:UIImage?;
     
     
     override func viewDidLoad() {
@@ -27,13 +27,12 @@ class TabViewController: UITabBarController, UITabBarControllerDelegate
     {
         super.viewWillAppear(animated)
     
+
         
-        self.homeIcon=UIImage();
-        //UIImage
         
         // Create Tab one: Home Page
         let tabOne = HomePageViewController()
-        let tabOneBarItem = UITabBarItem(title: "首页", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
+        let tabOneBarItem = UITabBarItem(title: "首页", image: UIImage(named: "defaultImage1.png"), selectedImage: UIImage(named: "selectedImage.png"))
         
         tabOne.tabBarItem = tabOneBarItem
         
