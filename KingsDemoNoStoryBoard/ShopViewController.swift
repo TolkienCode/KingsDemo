@@ -118,7 +118,8 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         shopNavigation = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: navigationBarHeight));
         shopNavigation!.backgroundColor=UIColor.white;
         
-        rightButton = UIBarButtonItem(title: "购物车", style: .done, target: nil, action: nil);
+        rightButton = UIBarButtonItem(image: UIImage(named: "icon_cart2"), style: .done, target: nil, action: #selector(showCart));
+        rightButton?.tintColor = UIColor.red
         navItem = UINavigationItem(title: "春之绿");
         navItem!.rightBarButtonItem = rightButton;
         
@@ -257,7 +258,8 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         present(ShopDetailViewController(), animated: true, completion: nil);
     }
     
-
-    
+    func showCart() {
+        present(cargoViewController(), animated: true, completion: nil);
+    }
     
 }

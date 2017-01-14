@@ -68,8 +68,12 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: self.navigationBarHeight));
         navigationBar!.backgroundColor=UIColor.white;
         
-        let rightButton = UIBarButtonItem(title: "购物车", style: .done, target: nil, action: nil)
-        let leftButton = UIBarButtonItem(title: "返回", style: .done, target: nil, action: #selector(ShopDetailViewController.goBack))
+        let rightButton = UIBarButtonItem(image: UIImage(named: "icon_cart2"), style: .done, target: nil, action: #selector(showCart))
+        let leftButton = UIBarButtonItem(image: UIImage(named: "icon_back"), style: .done, target: nil, action: #selector(ShopDetailViewController.goBack))
+        
+        leftButton.tintColor = UIColor.red
+        rightButton.tintColor = UIColor.red
+        
         /*
          homeNavigation!.topItem?.title = "首页";
          homeNavigation!.topItem?.rightBarButtonItem = rightButton;
@@ -191,10 +195,6 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         descritpion!.font = UIFont.systemFont(ofSize: 10);
         descritpion?.text = "商品介绍：\n" + "千年血玉为什么会跟血扯上关系？其实主要的依据就是它像血一样红的外观和传说。现在我们就一探究竟，看看千年血玉到底是什么样。\n" + "传说中的千年血玉并不是天然形成的，它那沁入内里的红色，其实是透了血的结果。这到底是怎么一回事？要追溯于人的尸体。当人下葬的时候，作为衔玉的玉器，会被强行塞到人口，随着最后一口气咽下进入咽喉处。咽喉处血管密集，玉器与血经历岁月的融合，便会形成血玉。传说就是这个样子，但事实真的如此吗？其实这是一种不科学的说法！血在地下是会碳化的，更不可能会像无机物那样沁入玉器的里。对于千年血玉的形成，其实是由铁元素造成的。出土血玉显现的红色是因为地下土壤中含有的铁元素或者是陪葬的铁制品被氧化分解，最终沁入玉体里。所以千年血玉才看起来那么红！"
         detailView?.addSubview(descritpion!);
-        
-        
-        
-
     }
     
     private func setupBottomView()
@@ -281,6 +281,8 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIGestur
         }
     }
 
-  
+    func showCart() {
+        present(cargoViewController(), animated: true, completion: nil)
+    }
 
 }
